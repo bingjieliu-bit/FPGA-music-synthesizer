@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Thu Nov 12 11:34:46 2026
+Sat Nov 14 17:37:39 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -48,16 +48,16 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  40. Parameter Settings for Inferred Entity Instance: keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod1
  41. Parameter Settings for Inferred Entity Instance: keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div1
  42. Parameter Settings for Inferred Entity Instance: keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod2
- 43. scfifo Parameter Settings by Entity Instance
- 44. altpll Parameter Settings by Entity Instance
- 45. Port Connectivity Checks: "audio:A0|avconf:avc|I2C_Controller:u0"
- 46. Port Connectivity Checks: "audio:A0|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock"
- 47. Port Connectivity Checks: "audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer"
- 48. Port Connectivity Checks: "audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer"
- 49. Port Connectivity Checks: "audio:A0|Audio_Controller:Audio_Controller"
- 50. Port Connectivity Checks: "audio:A0"
- 51. Port Connectivity Checks: "keyboard_to_frequency:K0|PS2_Controller:ps2"
- 52. Port Connectivity Checks: "keyboard_to_frequency:K0"
+ 43. Parameter Settings for Inferred Entity Instance: audio:A0|wave_adder:WA0|lpm_divide:Div0
+ 44. scfifo Parameter Settings by Entity Instance
+ 45. altpll Parameter Settings by Entity Instance
+ 46. Port Connectivity Checks: "audio:A0|avconf:avc|I2C_Controller:u0"
+ 47. Port Connectivity Checks: "audio:A0|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock"
+ 48. Port Connectivity Checks: "audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer"
+ 49. Port Connectivity Checks: "audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer"
+ 50. Port Connectivity Checks: "audio:A0|Audio_Controller:Audio_Controller"
+ 51. Port Connectivity Checks: "audio:A0"
+ 52. Port Connectivity Checks: "keyboard_to_frequency:K0|PS2_Controller:ps2"
  53. Post-Synthesis Netlist Statistics for Top Partition
  54. Elapsed Time Per Partition
  55. Analysis & Synthesis Messages
@@ -86,17 +86,17 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 12 11:34:46 2026           ;
+; Analysis & Synthesis Status     ; Successful - Sat Nov 14 17:37:39 2026           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; top                                             ;
 ; Top-level Entity Name           ; top                                             ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 351                                             ;
-; Total pins                      ; 47                                              ;
+; Total registers                 ; 703                                             ;
+; Total pins                      ; 48                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 8,192                                           ;
-; Total DSP Blocks                ; 1                                               ;
+; Total DSP Blocks                ; 12                                              ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs              ; 0                                               ;
@@ -266,6 +266,11 @@ refer to the applicable agreement for further details.
 ; db/lpm_divide_hbm.tdf                                    ; yes             ; Auto-Generated Megafunction                 ; W:/ece241/milestone1/db/lpm_divide_hbm.tdf                                                   ;         ;
 ; db/sign_div_unsign_nlh.tdf                               ; yes             ; Auto-Generated Megafunction                 ; W:/ece241/milestone1/db/sign_div_unsign_nlh.tdf                                              ;         ;
 ; db/alt_u_div_kve.tdf                                     ; yes             ; Auto-Generated Megafunction                 ; W:/ece241/milestone1/db/alt_u_div_kve.tdf                                                    ;         ;
+; db/lpm_divide_8po.tdf                                    ; yes             ; Auto-Generated Megafunction                 ; W:/ece241/milestone1/db/lpm_divide_8po.tdf                                                   ;         ;
+; db/abs_divider_hbg.tdf                                   ; yes             ; Auto-Generated Megafunction                 ; W:/ece241/milestone1/db/abs_divider_hbg.tdf                                                  ;         ;
+; db/alt_u_div_ive.tdf                                     ; yes             ; Auto-Generated Megafunction                 ; W:/ece241/milestone1/db/alt_u_div_ive.tdf                                                    ;         ;
+; db/lpm_abs_kn9.tdf                                       ; yes             ; Auto-Generated Megafunction                 ; W:/ece241/milestone1/db/lpm_abs_kn9.tdf                                                      ;         ;
+; db/lpm_abs_1p9.tdf                                       ; yes             ; Auto-Generated Megafunction                 ; W:/ece241/milestone1/db/lpm_abs_1p9.tdf                                                      ;         ;
 +----------------------------------------------------------+-----------------+---------------------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
@@ -274,30 +279,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 685            ;
+; Estimate of Logic utilization (ALMs needed) ; 3553           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1051           ;
-;     -- 7 input functions                    ; 7              ;
-;     -- 6 input functions                    ; 306            ;
-;     -- 5 input functions                    ; 130            ;
-;     -- 4 input functions                    ; 116            ;
-;     -- <=3 input functions                  ; 492            ;
+; Combinational ALUT usage for logic          ; 4589           ;
+;     -- 7 input functions                    ; 33             ;
+;     -- 6 input functions                    ; 2479           ;
+;     -- 5 input functions                    ; 456            ;
+;     -- 4 input functions                    ; 393            ;
+;     -- <=3 input functions                  ; 1228           ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 351            ;
+; Dedicated logic registers                   ; 703            ;
 ;                                             ;                ;
-; I/O pins                                    ; 47             ;
+; I/O pins                                    ; 48             ;
 ; Total MLAB memory bits                      ; 0              ;
 ; Total block memory bits                     ; 8192           ;
 ;                                             ;                ;
-; Total DSP Blocks                            ; 1              ;
+; Total DSP Blocks                            ; 12             ;
 ;                                             ;                ;
 ; Total PLLs                                  ; 1              ;
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 358            ;
-; Total fan-out                               ; 6678           ;
-; Average fan-out                             ; 4.26           ;
+; Maximum fan-out                             ; 710            ;
+; Total fan-out                               ; 26228          ;
+; Average fan-out                             ; 4.79           ;
 +---------------------------------------------+----------------+
 
 
@@ -306,22 +311,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
 ; Compilation Hierarchy Node                                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                           ; Entity Name                    ; Library Name ;
 +----------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
-; |top                                                           ; 1051 (1)            ; 351 (0)                   ; 8192              ; 1          ; 47   ; 0            ; |top                                                                                                                                                                                                                                          ; top                            ; work         ;
-;    |audio:A0|                                                  ; 523 (1)             ; 248 (17)                  ; 8192              ; 1          ; 0    ; 0            ; |top|audio:A0                                                                                                                                                                                                                                 ; audio                          ; work         ;
-;       |Audio_Controller:Audio_Controller|                      ; 153 (2)             ; 110 (2)                   ; 8192              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller                                                                                                                                                                                               ; Audio_Controller               ; work         ;
-;          |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer| ; 150 (56)            ; 104 (38)                  ; 8192              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                           ; Altera_UP_Audio_Out_Serializer ; work         ;
-;             |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|  ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO            ; work         ;
-;                |scfifo:Sync_FIFO|                              ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                          ; scfifo                         ; work         ;
-;                   |scfifo_7ba1:auto_generated|                 ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated                                               ; scfifo_7ba1                    ; work         ;
-;                      |a_dpfifo_q2a1:dpfifo|                    ; 47 (24)             ; 33 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo                          ; a_dpfifo_q2a1                  ; work         ;
+; |top                                                           ; 4589 (1)            ; 703 (0)                   ; 8192              ; 12         ; 48   ; 0            ; |top                                                                                                                                                                                                                                          ; top                            ; work         ;
+;    |audio:A0|                                                  ; 4004 (174)          ; 600 (17)                  ; 8192              ; 12         ; 0    ; 0            ; |top|audio:A0                                                                                                                                                                                                                                 ; audio                          ; work         ;
+;       |Audio_Controller:Audio_Controller|                      ; 156 (2)             ; 110 (2)                   ; 8192              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller                                                                                                                                                                                               ; Audio_Controller               ; work         ;
+;          |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer| ; 153 (57)            ; 104 (38)                  ; 8192              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                           ; Altera_UP_Audio_Out_Serializer ; work         ;
+;             |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|  ; 48 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO            ; work         ;
+;                |scfifo:Sync_FIFO|                              ; 48 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                          ; scfifo                         ; work         ;
+;                   |scfifo_7ba1:auto_generated|                 ; 48 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated                                               ; scfifo_7ba1                    ; work         ;
+;                      |a_dpfifo_q2a1:dpfifo|                    ; 48 (25)             ; 33 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo                          ; a_dpfifo_q2a1                  ; work         ;
 ;                         |altsyncram_n3i1:FIFOram|              ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram  ; altsyncram_n3i1                ; work         ;
 ;                         |cntr_h2b:rd_ptr_msb|                  ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_h2b:rd_ptr_msb      ; cntr_h2b                       ; work         ;
 ;                         |cntr_i2b:wr_ptr|                      ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_i2b:wr_ptr          ; cntr_i2b                       ; work         ;
 ;                         |cntr_u27:usedw_counter|               ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_u27:usedw_counter   ; cntr_u27                       ; work         ;
-;             |Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO| ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO                                                                                          ; Altera_UP_SYNC_FIFO            ; work         ;
-;                |scfifo:Sync_FIFO|                              ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                         ; scfifo                         ; work         ;
-;                   |scfifo_7ba1:auto_generated|                 ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated                                              ; scfifo_7ba1                    ; work         ;
-;                      |a_dpfifo_q2a1:dpfifo|                    ; 47 (24)             ; 33 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo                         ; a_dpfifo_q2a1                  ; work         ;
+;             |Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO| ; 48 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO                                                                                          ; Altera_UP_SYNC_FIFO            ; work         ;
+;                |scfifo:Sync_FIFO|                              ; 48 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                         ; scfifo                         ; work         ;
+;                   |scfifo_7ba1:auto_generated|                 ; 48 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated                                              ; scfifo_7ba1                    ; work         ;
+;                      |a_dpfifo_q2a1:dpfifo|                    ; 48 (25)             ; 33 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo                         ; a_dpfifo_q2a1                  ; work         ;
 ;                         |altsyncram_n3i1:FIFOram|              ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram ; altsyncram_n3i1                ; work         ;
 ;                         |cntr_h2b:rd_ptr_msb|                  ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_h2b:rd_ptr_msb     ; cntr_h2b                       ; work         ;
 ;                         |cntr_i2b:wr_ptr|                      ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_i2b:wr_ptr         ; cntr_i2b                       ; work         ;
@@ -332,29 +337,79 @@ refer to the applicable agreement for further details.
 ;             |altpll:altpll_component|                          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component                                                                                                                                               ; altpll                         ; work         ;
 ;                |Audio_Clock_altpll:auto_generated|             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component|Audio_Clock_altpll:auto_generated                                                                                                             ; Audio_Clock_altpll             ; work         ;
 ;       |audio_sample_tick:T0|                                   ; 16 (16)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|audio_sample_tick:T0                                                                                                                                                                                                            ; audio_sample_tick              ; work         ;
-;       |avconf:avc|                                             ; 93 (54)             ; 75 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|avconf:avc                                                                                                                                                                                                                      ; avconf                         ; work         ;
-;          |I2C_Controller:u0|                                   ; 39 (39)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|avconf:avc|I2C_Controller:u0                                                                                                                                                                                                    ; I2C_Controller                 ; work         ;
+;       |avconf:avc|                                             ; 97 (54)             ; 75 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|avconf:avc                                                                                                                                                                                                                      ; avconf                         ; work         ;
+;          |I2C_Controller:u0|                                   ; 43 (43)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|avconf:avc|I2C_Controller:u0                                                                                                                                                                                                    ; I2C_Controller                 ; work         ;
 ;       |frequency_to_phase:F0|                                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F0                                                                                                                                                                                                           ; frequency_to_phase             ; work         ;
-;       |nco:N0|                                                 ; 33 (33)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N0                                                                                                                                                                                                                          ; nco                            ; work         ;
-;       |wave_generator:W0|                                      ; 227 (3)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W0                                                                                                                                                                                                               ; wave_generator                 ; work         ;
-;          |sine_generator:G0|                                   ; 224 (224)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W0|sine_generator:G0                                                                                                                                                                                             ; sine_generator                 ; work         ;
-;    |keyboard_to_frequency:K0|                                  ; 527 (0)             ; 103 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0                                                                                                                                                                                                                 ; keyboard_to_frequency          ; work         ;
-;       |PS2_Controller:ps2|                                     ; 106 (6)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2                                                                                                                                                                                              ; PS2_Controller                 ; work         ;
-;          |Altera_UP_PS2_Command_Out:PS2_Command_Out|           ; 86 (86)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out                                                                                                                                                    ; Altera_UP_PS2_Command_Out      ; work         ;
+;       |frequency_to_phase:F10|                                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F10                                                                                                                                                                                                          ; frequency_to_phase             ; work         ;
+;       |frequency_to_phase:F11|                                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F11                                                                                                                                                                                                          ; frequency_to_phase             ; work         ;
+;       |frequency_to_phase:F1|                                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F1                                                                                                                                                                                                           ; frequency_to_phase             ; work         ;
+;       |frequency_to_phase:F2|                                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F2                                                                                                                                                                                                           ; frequency_to_phase             ; work         ;
+;       |frequency_to_phase:F3|                                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F3                                                                                                                                                                                                           ; frequency_to_phase             ; work         ;
+;       |frequency_to_phase:F4|                                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F4                                                                                                                                                                                                           ; frequency_to_phase             ; work         ;
+;       |frequency_to_phase:F5|                                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F5                                                                                                                                                                                                           ; frequency_to_phase             ; work         ;
+;       |frequency_to_phase:F6|                                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F6                                                                                                                                                                                                           ; frequency_to_phase             ; work         ;
+;       |frequency_to_phase:F7|                                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F7                                                                                                                                                                                                           ; frequency_to_phase             ; work         ;
+;       |frequency_to_phase:F8|                                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F8                                                                                                                                                                                                           ; frequency_to_phase             ; work         ;
+;       |frequency_to_phase:F9|                                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|audio:A0|frequency_to_phase:F9                                                                                                                                                                                                           ; frequency_to_phase             ; work         ;
+;       |nco:N0|                                                 ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N0                                                                                                                                                                                                                          ; nco                            ; work         ;
+;       |nco:N10|                                                ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N10                                                                                                                                                                                                                         ; nco                            ; work         ;
+;       |nco:N11|                                                ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N11                                                                                                                                                                                                                         ; nco                            ; work         ;
+;       |nco:N1|                                                 ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N1                                                                                                                                                                                                                          ; nco                            ; work         ;
+;       |nco:N2|                                                 ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N2                                                                                                                                                                                                                          ; nco                            ; work         ;
+;       |nco:N3|                                                 ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N3                                                                                                                                                                                                                          ; nco                            ; work         ;
+;       |nco:N4|                                                 ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N4                                                                                                                                                                                                                          ; nco                            ; work         ;
+;       |nco:N5|                                                 ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N5                                                                                                                                                                                                                          ; nco                            ; work         ;
+;       |nco:N6|                                                 ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N6                                                                                                                                                                                                                          ; nco                            ; work         ;
+;       |nco:N7|                                                 ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N7                                                                                                                                                                                                                          ; nco                            ; work         ;
+;       |nco:N8|                                                 ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N8                                                                                                                                                                                                                          ; nco                            ; work         ;
+;       |nco:N9|                                                 ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|nco:N9                                                                                                                                                                                                                          ; nco                            ; work         ;
+;       |wave_adder:WA0|                                         ; 474 (162)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_adder:WA0                                                                                                                                                                                                                  ; wave_adder                     ; work         ;
+;          |lpm_divide:Div0|                                     ; 312 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_adder:WA0|lpm_divide:Div0                                                                                                                                                                                                  ; lpm_divide                     ; work         ;
+;             |lpm_divide_8po:auto_generated|                    ; 312 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_adder:WA0|lpm_divide:Div0|lpm_divide_8po:auto_generated                                                                                                                                                                    ; lpm_divide_8po                 ; work         ;
+;                |abs_divider_hbg:divider|                       ; 312 (32)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_adder:WA0|lpm_divide:Div0|lpm_divide_8po:auto_generated|abs_divider_hbg:divider                                                                                                                                            ; abs_divider_hbg                ; work         ;
+;                   |alt_u_div_ive:divider|                      ; 260 (260)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_adder:WA0|lpm_divide:Div0|lpm_divide_8po:auto_generated|abs_divider_hbg:divider|alt_u_div_ive:divider                                                                                                                      ; alt_u_div_ive                  ; work         ;
+;                   |lpm_abs_1p9:my_abs_num|                     ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_adder:WA0|lpm_divide:Div0|lpm_divide_8po:auto_generated|abs_divider_hbg:divider|lpm_abs_1p9:my_abs_num                                                                                                                     ; lpm_abs_1p9                    ; work         ;
+;       |wave_generator:W0|                                      ; 227 (2)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W0                                                                                                                                                                                                               ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 225 (225)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W0|sine_generator:G0                                                                                                                                                                                             ; sine_generator                 ; work         ;
+;       |wave_generator:W10|                                     ; 227 (2)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W10                                                                                                                                                                                                              ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 225 (225)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W10|sine_generator:G0                                                                                                                                                                                            ; sine_generator                 ; work         ;
+;       |wave_generator:W11|                                     ; 223 (1)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W11                                                                                                                                                                                                              ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 222 (222)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W11|sine_generator:G0                                                                                                                                                                                            ; sine_generator                 ; work         ;
+;       |wave_generator:W1|                                      ; 223 (1)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W1                                                                                                                                                                                                               ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 222 (222)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W1|sine_generator:G0                                                                                                                                                                                             ; sine_generator                 ; work         ;
+;       |wave_generator:W2|                                      ; 227 (2)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W2                                                                                                                                                                                                               ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 225 (225)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W2|sine_generator:G0                                                                                                                                                                                             ; sine_generator                 ; work         ;
+;       |wave_generator:W3|                                      ; 226 (4)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W3                                                                                                                                                                                                               ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 222 (222)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W3|sine_generator:G0                                                                                                                                                                                             ; sine_generator                 ; work         ;
+;       |wave_generator:W4|                                      ; 227 (2)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W4                                                                                                                                                                                                               ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 225 (225)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W4|sine_generator:G0                                                                                                                                                                                             ; sine_generator                 ; work         ;
+;       |wave_generator:W5|                                      ; 223 (1)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W5                                                                                                                                                                                                               ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 222 (222)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W5|sine_generator:G0                                                                                                                                                                                             ; sine_generator                 ; work         ;
+;       |wave_generator:W6|                                      ; 227 (2)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W6                                                                                                                                                                                                               ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 225 (225)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W6|sine_generator:G0                                                                                                                                                                                             ; sine_generator                 ; work         ;
+;       |wave_generator:W7|                                      ; 223 (1)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W7                                                                                                                                                                                                               ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 222 (222)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W7|sine_generator:G0                                                                                                                                                                                             ; sine_generator                 ; work         ;
+;       |wave_generator:W8|                                      ; 227 (2)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W8                                                                                                                                                                                                               ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 225 (225)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W8|sine_generator:G0                                                                                                                                                                                             ; sine_generator                 ; work         ;
+;       |wave_generator:W9|                                      ; 223 (1)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W9                                                                                                                                                                                                               ; wave_generator                 ; work         ;
+;          |sine_generator:G0|                                   ; 222 (222)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|audio:A0|wave_generator:W9|sine_generator:G0                                                                                                                                                                                             ; sine_generator                 ; work         ;
+;    |keyboard_to_frequency:K0|                                  ; 584 (0)             ; 103 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0                                                                                                                                                                                                                 ; keyboard_to_frequency          ; work         ;
+;       |PS2_Controller:ps2|                                     ; 104 (7)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2                                                                                                                                                                                              ; PS2_Controller                 ; work         ;
+;          |Altera_UP_PS2_Command_Out:PS2_Command_Out|           ; 83 (83)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out                                                                                                                                                    ; Altera_UP_PS2_Command_Out      ; work         ;
 ;          |Altera_UP_PS2_Data_In:PS2_Data_In|                   ; 14 (14)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In                                                                                                                                                            ; Altera_UP_PS2_Data_In          ; work         ;
-;       |frequency_display:display|                              ; 397 (82)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display                                                                                                                                                                                       ; frequency_display              ; work         ;
-;          |lpm_divide:Div0|                                     ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div0                                                                                                                                                                       ; lpm_divide                     ; work         ;
-;             |lpm_divide_ebm:auto_generated|                    ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                         ; lpm_divide_ebm                 ; work         ;
-;                |sign_div_unsign_klh:divider|                   ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                             ; sign_div_unsign_klh            ; work         ;
-;                   |alt_u_div_eve:divider|                      ; 71 (71)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                       ; alt_u_div_eve                  ; work         ;
+;       |frequency_display:display|                              ; 402 (85)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display                                                                                                                                                                                       ; frequency_display              ; work         ;
+;          |lpm_divide:Div0|                                     ; 72 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div0                                                                                                                                                                       ; lpm_divide                     ; work         ;
+;             |lpm_divide_ebm:auto_generated|                    ; 72 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                         ; lpm_divide_ebm                 ; work         ;
+;                |sign_div_unsign_klh:divider|                   ; 72 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                             ; sign_div_unsign_klh            ; work         ;
+;                   |alt_u_div_eve:divider|                      ; 72 (72)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                       ; alt_u_div_eve                  ; work         ;
 ;          |lpm_divide:Div1|                                     ; 61 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div1                                                                                                                                                                       ; lpm_divide                     ; work         ;
 ;             |lpm_divide_hbm:auto_generated|                    ; 61 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div1|lpm_divide_hbm:auto_generated                                                                                                                                         ; lpm_divide_hbm                 ; work         ;
 ;                |sign_div_unsign_nlh:divider|                   ; 61 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                                                                                                             ; sign_div_unsign_nlh            ; work         ;
 ;                   |alt_u_div_kve:divider|                      ; 61 (61)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider                                                                                       ; alt_u_div_kve                  ; work         ;
-;          |lpm_divide:Mod0|                                     ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod0                                                                                                                                                                       ; lpm_divide                     ; work         ;
-;             |lpm_divide_h3m:auto_generated|                    ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod0|lpm_divide_h3m:auto_generated                                                                                                                                         ; lpm_divide_h3m                 ; work         ;
-;                |sign_div_unsign_klh:divider|                   ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                                                                                                             ; sign_div_unsign_klh            ; work         ;
-;                   |alt_u_div_eve:divider|                      ; 75 (75)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                       ; alt_u_div_eve                  ; work         ;
+;          |lpm_divide:Mod0|                                     ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod0                                                                                                                                                                       ; lpm_divide                     ; work         ;
+;             |lpm_divide_h3m:auto_generated|                    ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod0|lpm_divide_h3m:auto_generated                                                                                                                                         ; lpm_divide_h3m                 ; work         ;
+;                |sign_div_unsign_klh:divider|                   ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                                                                                                             ; sign_div_unsign_klh            ; work         ;
+;                   |alt_u_div_eve:divider|                      ; 76 (76)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                       ; alt_u_div_eve                  ; work         ;
 ;          |lpm_divide:Mod1|                                     ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod1                                                                                                                                                                       ; lpm_divide                     ; work         ;
 ;             |lpm_divide_h3m:auto_generated|                    ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod1|lpm_divide_h3m:auto_generated                                                                                                                                         ; lpm_divide_h3m                 ; work         ;
 ;                |sign_div_unsign_klh:divider|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod1|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                                                                                                             ; sign_div_unsign_klh            ; work         ;
@@ -367,7 +422,7 @@ refer to the applicable agreement for further details.
 ;          |seg7_display_hex:h1|                                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|seg7_display_hex:h1                                                                                                                                                                   ; seg7_display_hex               ; work         ;
 ;          |seg7_display_hex:h2|                                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|frequency_display:display|seg7_display_hex:h2                                                                                                                                                                   ; seg7_display_hex               ; work         ;
 ;       |keyboard_to_notes:keyboard|                             ; 22 (22)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|keyboard_to_notes:keyboard                                                                                                                                                                                      ; keyboard_to_notes              ; work         ;
-;       |notes_to_frequency:frequencies|                         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|notes_to_frequency:frequencies                                                                                                                                                                                  ; notes_to_frequency             ; work         ;
+;       |notes_to_frequency:frequencies|                         ; 56 (56)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|keyboard_to_frequency:K0|notes_to_frequency:frequencies                                                                                                                                                                                  ; notes_to_frequency             ; work         ;
 +----------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -387,10 +442,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 ; Statistic                       ; Number Used ;
 +---------------------------------+-------------+
-; Two Independent 18x18           ; 1           ;
-; Total number of DSP blocks      ; 1           ;
+; Two Independent 18x18           ; 12          ;
+; Total number of DSP blocks      ; 12          ;
 ;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 1           ;
+; Fixed Point Unsigned Multiplier ; 12          ;
 +---------------------------------+-------------+
 
 
@@ -521,8 +576,8 @@ Encoding Type:  One-Hot
 ; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver~3                                                                                                                                                                 ; Lost fanout                                                                                                      ;
 ; keyboard_to_frequency:K0|PS2_Controller:ps2|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT                                                                                                                                                                          ; Stuck at GND due to stuck port data_in                                                                           ;
 ; keyboard_to_frequency:K0|PS2_Controller:ps2|s_ps2_transceiver.PS2_STATE_4_END_DELAYED                                                                                                                                                                          ; Stuck at GND due to stuck port data_in                                                                           ;
-; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                                                                                                                                                         ; Lost fanout                                                                                                      ;
 ; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out                                                                                                                                            ; Lost fanout                                                                                                      ;
+; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                                                                                                                                                         ; Lost fanout                                                                                                      ;
 ; keyboard_to_frequency:K0|PS2_Controller:ps2|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER                                                                                                                                                                         ; Stuck at GND due to stuck port data_in                                                                           ;
 ; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA                                                                                                                                         ; Stuck at GND due to stuck port data_in                                                                           ;
 ; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_0_IDLE                                                                                                                                       ; Stuck at GND due to stuck port data_in                                                                           ;
@@ -554,8 +609,8 @@ Encoding Type:  One-Hot
 ;                                                                                                                                                                                                                            ;                           ; keyboard_to_frequency:K0|PS2_Controller:ps2|idle_counter[5],                                                                                                                                                                                                 ;
 ;                                                                                                                                                                                                                            ;                           ; keyboard_to_frequency:K0|PS2_Controller:ps2|idle_counter[6],                                                                                                                                                                                                 ;
 ;                                                                                                                                                                                                                            ;                           ; keyboard_to_frequency:K0|PS2_Controller:ps2|idle_counter[7]                                                                                                                                                                                                  ;
-; keyboard_to_frequency:K0|PS2_Controller:ps2|s_ps2_transceiver~2                                                                                                                                                            ; Lost Fanouts              ; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                                                                                                                                                      ;
-;                                                                                                                                                                                                                            ;                           ; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,                                                                                                                                         ;
+; keyboard_to_frequency:K0|PS2_Controller:ps2|s_ps2_transceiver~2                                                                                                                                                            ; Lost Fanouts              ; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,                                                                                                                                         ;
+;                                                                                                                                                                                                                            ;                           ; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                                                                                                                                                      ;
 ;                                                                                                                                                                                                                            ;                           ; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT,                                                                                                                        ;
 ;                                                                                                                                                                                                                            ;                           ; keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR                                                                                                                       ;
 ; keyboard_to_frequency:K0|PS2_Controller:ps2|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT                                                                                                                                      ; Stuck at GND              ; keyboard_to_frequency:K0|PS2_Controller:ps2|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER,                                                                                                                                                                      ;
@@ -577,12 +632,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 351   ;
-; Number of registers using Synchronous Clear  ; 214   ;
-; Number of registers using Synchronous Load   ; 14    ;
-; Number of registers using Asynchronous Clear ; 102   ;
+; Total registers                              ; 703   ;
+; Number of registers using Synchronous Clear  ; 215   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 454   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 235   ;
+; Number of registers using Clock Enable       ; 587   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -592,35 +647,37 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+---------+
 ; Inverted Register                                   ; Fan out ;
 +-----------------------------------------------------+---------+
-; audio:A0|avconf:avc|I2C_Controller:u0|SCLK          ; 3       ;
+; audio:A0|avconf:avc|I2C_Controller:u0|SCLK          ; 2       ;
 ; audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[5] ; 17      ;
-; audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[4] ; 18      ;
-; audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[3] ; 21      ;
-; audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[2] ; 21      ;
-; audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[1] ; 17      ;
-; audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[0] ; 23      ;
-; audio:A0|avconf:avc|I2C_Controller:u0|END           ; 6       ;
+; audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[4] ; 19      ;
+; audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[3] ; 24      ;
+; audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[2] ; 20      ;
+; audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[1] ; 18      ;
+; audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[0] ; 26      ;
+; audio:A0|avconf:avc|I2C_Controller:u0|END           ; 5       ;
 ; audio:A0|avconf:avc|I2C_Controller:u0|SDO           ; 2       ;
 ; Total number of inverted registers = 9              ;         ;
 +-----------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[0]                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[4]                      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|audio:A0|audio_sample_tick:T0|count[1]                                                                               ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[1]    ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[4]             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[3]                     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0]                          ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[5]            ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[8] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[0]                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[3]                        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[3]                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|audio:A0|audio_sample_tick:T0|count[0]                                                                                ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[11]    ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[15]             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[0]                      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[3]                           ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |top|keyboard_to_frequency:K0|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[1]             ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |top|audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[15] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|audio:A0|avconf:avc|I2C_Controller:u0|SD_COUNTER[0]                                                                   ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top|keyboard_to_frequency:K0|frequency_display:display|display_freq[0]                                                    ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |top|keyboard_to_frequency:K0|frequency_display:display|display_freq[8]                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1413,6 +1470,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: audio:A0|wave_adder:WA0|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                                        ;
+; LPM_WIDTHD             ; 5              ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_8po ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; scfifo Parameter Settings by Entity Instance                                                                                                                                                   ;
 +----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1539,58 +1619,50 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+--------+----------+------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "keyboard_to_frequency:K0"                                                                                                                                                       ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; SW   ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (2 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 351                         ;
+; arriav_ff             ; 703                         ;
 ;     CLR               ; 23                          ;
 ;     CLR SCLR          ; 27                          ;
 ;     ENA               ; 46                          ;
-;     ENA CLR           ; 37                          ;
-;     ENA CLR SCLR      ; 1                           ;
-;     ENA CLR SCLR SLD  ; 14                          ;
+;     ENA CLR           ; 388                         ;
+;     ENA CLR SCLR      ; 16                          ;
 ;     ENA SCLR          ; 137                         ;
 ;     SCLR              ; 35                          ;
 ;     plain             ; 31                          ;
 ; arriav_io_obuf        ; 6                           ;
-; arriav_lcell_comb     ; 1054                        ;
-;     arith             ; 347                         ;
-;         0 data inputs ; 50                          ;
-;         1 data inputs ; 131                         ;
-;         2 data inputs ; 52                          ;
-;         3 data inputs ; 78                          ;
-;         4 data inputs ; 36                          ;
-;     extend            ; 7                           ;
-;         7 data inputs ; 7                           ;
-;     normal            ; 690                         ;
+; arriav_lcell_comb     ; 4592                        ;
+;     arith             ; 1005                        ;
+;         0 data inputs ; 89                          ;
+;         1 data inputs ; 204                         ;
+;         2 data inputs ; 390                         ;
+;         3 data inputs ; 83                          ;
+;         4 data inputs ; 115                         ;
+;         5 data inputs ; 124                         ;
+;     extend            ; 33                          ;
+;         7 data inputs ; 33                          ;
+;     normal            ; 3501                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 80                          ;
-;         3 data inputs ; 87                          ;
-;         4 data inputs ; 80                          ;
-;         5 data inputs ; 130                         ;
-;         6 data inputs ; 306                         ;
-;     shared            ; 10                          ;
-;         0 data inputs ; 6                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 192                         ;
+;         3 data inputs ; 214                         ;
+;         4 data inputs ; 278                         ;
+;         5 data inputs ; 332                         ;
+;         6 data inputs ; 2479                        ;
+;     shared            ; 53                          ;
+;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 4                           ;
-; arriav_mac            ; 1                           ;
-; boundary_port         ; 47                          ;
+;         3 data inputs ; 41                          ;
+; arriav_mac            ; 12                          ;
+; boundary_port         ; 48                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 19.00                       ;
-; Average LUT depth     ; 6.31                        ;
+; Max LUT depth         ; 45.60                       ;
+; Average LUT depth     ; 27.73                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1599,7 +1671,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:29     ;
+; Top            ; 00:01:02     ;
 +----------------+--------------+
 
 
@@ -1609,7 +1681,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Thu Nov 12 11:32:17 2026
+    Info: Processing started: Sat Nov 14 17:34:02 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -1643,10 +1715,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file audio/a
     Info (12023): Found entity 1: Altera_UP_Audio_In_Deserializer File: W:/ece241/milestone1/audio/Audio_Controller/Altera_UP_Audio_In_Deserializer.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file audio/audio_controller/altera_up_audio_bit_counter.v
     Info (12023): Found entity 1: Altera_UP_Audio_Bit_Counter File: W:/ece241/milestone1/audio/Audio_Controller/Altera_UP_Audio_Bit_Counter.v Line: 11
-Info (12021): Found 3 design units, including 3 entities, in source file audio/wave_generator.v
+Info (12021): Found 4 design units, including 4 entities, in source file audio/wave_generator.v
     Info (12023): Found entity 1: wave_generator File: W:/ece241/milestone1/audio/wave_generator.v Line: 2
     Info (12023): Found entity 2: sine_generator File: W:/ece241/milestone1/audio/wave_generator.v Line: 23
     Info (12023): Found entity 3: square_generator File: W:/ece241/milestone1/audio/wave_generator.v Line: 37
+    Info (12023): Found entity 4: wave_adder File: W:/ece241/milestone1/audio/wave_generator.v Line: 46
 Info (12021): Found 3 design units, including 3 entities, in source file audio/nco_sampling.v
     Info (12023): Found entity 1: nco File: W:/ece241/milestone1/audio/NCO_sampling.v Line: 1
     Info (12023): Found entity 2: audio_sample_tick File: W:/ece241/milestone1/audio/NCO_sampling.v Line: 22
@@ -1668,16 +1741,18 @@ Warning (10230): Verilog HDL assignment warning at keyboard_to_frequency.v(182):
 Warning (10230): Verilog HDL assignment warning at keyboard_to_frequency.v(183): truncated value with size 32 to match size of target (4) File: W:/ece241/milestone1/keyboard_frequency/keyboard_to_frequency.v Line: 183
 Info (12128): Elaborating entity "seg7_display_hex" for hierarchy "keyboard_to_frequency:K0|frequency_display:display|seg7_display_hex:h0" File: W:/ece241/milestone1/keyboard_frequency/keyboard_to_frequency.v Line: 186
 Info (12128): Elaborating entity "audio" for hierarchy "audio:A0" File: W:/ece241/milestone1/top.v Line: 59
-Info (12128): Elaborating entity "frequency_to_phase" for hierarchy "audio:A0|frequency_to_phase:F0" File: W:/ece241/milestone1/audio/audio.v Line: 81
-Info (12128): Elaborating entity "audio_sample_tick" for hierarchy "audio:A0|audio_sample_tick:T0" File: W:/ece241/milestone1/audio/audio.v Line: 89
-Info (12128): Elaborating entity "nco" for hierarchy "audio:A0|nco:N0" File: W:/ece241/milestone1/audio/audio.v Line: 99
-Info (12128): Elaborating entity "wave_generator" for hierarchy "audio:A0|wave_generator:W0" File: W:/ece241/milestone1/audio/audio.v Line: 108
+Info (12128): Elaborating entity "frequency_to_phase" for hierarchy "audio:A0|frequency_to_phase:F0" File: W:/ece241/milestone1/audio/audio.v Line: 110
+Info (12128): Elaborating entity "audio_sample_tick" for hierarchy "audio:A0|audio_sample_tick:T0" File: W:/ece241/milestone1/audio/audio.v Line: 131
+Info (12128): Elaborating entity "nco" for hierarchy "audio:A0|nco:N0" File: W:/ece241/milestone1/audio/audio.v Line: 135
+Info (12128): Elaborating entity "wave_generator" for hierarchy "audio:A0|wave_generator:W0" File: W:/ece241/milestone1/audio/audio.v Line: 151
 Info (12128): Elaborating entity "sine_generator" for hierarchy "audio:A0|wave_generator:W0|sine_generator:G0" File: W:/ece241/milestone1/audio/wave_generator.v Line: 9
 Warning (10030): Net "sine_rom.data_a" at wave_generator.v(27) has no driver or initial value, using a default initial value '0' File: W:/ece241/milestone1/audio/wave_generator.v Line: 27
 Warning (10030): Net "sine_rom.waddr_a" at wave_generator.v(27) has no driver or initial value, using a default initial value '0' File: W:/ece241/milestone1/audio/wave_generator.v Line: 27
 Warning (10030): Net "sine_rom.we_a" at wave_generator.v(27) has no driver or initial value, using a default initial value '0' File: W:/ece241/milestone1/audio/wave_generator.v Line: 27
 Info (12128): Elaborating entity "square_generator" for hierarchy "audio:A0|wave_generator:W0|square_generator:G1" File: W:/ece241/milestone1/audio/wave_generator.v Line: 10
-Info (12128): Elaborating entity "Audio_Controller" for hierarchy "audio:A0|Audio_Controller:Audio_Controller" File: W:/ece241/milestone1/audio/audio.v Line: 204
+Info (12128): Elaborating entity "wave_adder" for hierarchy "audio:A0|wave_adder:WA0" File: W:/ece241/milestone1/audio/audio.v Line: 179
+Warning (10230): Verilog HDL assignment warning at wave_generator.v(69): truncated value with size 20 to match size of target (16) File: W:/ece241/milestone1/audio/wave_generator.v Line: 69
+Info (12128): Elaborating entity "Audio_Controller" for hierarchy "audio:A0|Audio_Controller:Audio_Controller" File: W:/ece241/milestone1/audio/audio.v Line: 275
 Info (12128): Elaborating entity "Altera_UP_Clock_Edge" for hierarchy "audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:Bit_Clock_Edges" File: W:/ece241/milestone1/audio/Audio_Controller/Audio_Controller.v Line: 182
 Info (12128): Elaborating entity "Altera_UP_Audio_In_Deserializer" for hierarchy "audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer" File: W:/ece241/milestone1/audio/Audio_Controller/Audio_Controller.v Line: 237
 Info (12128): Elaborating entity "Altera_UP_Audio_Bit_Counter" for hierarchy "audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter" File: W:/ece241/milestone1/audio/Audio_Controller/Altera_UP_Audio_In_Deserializer.v Line: 159
@@ -1779,7 +1854,7 @@ Info (12133): Instantiated megafunction "audio:A0|Audio_Controller:Audio_Control
 Info (12021): Found 1 design units, including 1 entities, in source file db/audio_clock_altpll.v
     Info (12023): Found entity 1: Audio_Clock_altpll File: W:/ece241/milestone1/db/audio_clock_altpll.v Line: 29
 Info (12128): Elaborating entity "Audio_Clock_altpll" for hierarchy "audio:A0|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component|Audio_Clock_altpll:auto_generated" File: c:/intelfpga/quartus_prime_standard_18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "avconf" for hierarchy "audio:A0|avconf:avc" File: W:/ece241/milestone1/audio/audio.v Line: 211
+Info (12128): Elaborating entity "avconf" for hierarchy "audio:A0|avconf:avc" File: W:/ece241/milestone1/audio/audio.v Line: 282
 Warning (10230): Verilog HDL assignment warning at avconf.v(68): truncated value with size 32 to match size of target (16) File: W:/ece241/milestone1/audio/avconf/avconf.v Line: 68
 Warning (10230): Verilog HDL assignment warning at avconf.v(119): truncated value with size 32 to match size of target (6) File: W:/ece241/milestone1/audio/avconf/avconf.v Line: 119
 Warning (10230): Verilog HDL assignment warning at avconf.v(137): truncated value with size 32 to match size of target (16) File: W:/ece241/milestone1/audio/avconf/avconf.v Line: 137
@@ -1856,12 +1931,13 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "audio:A0|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram|q_b[31]" File: W:/ece241/milestone1/db/altsyncram_n3i1.tdf Line: 967
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "audio:A0|avconf:avc|Ram0" is uninferred due to inappropriate RAM size File: W:/ece241/milestone1/audio/avconf/avconf.v Line: 131
-Info (278001): Inferred 5 megafunctions from design logic
+Info (278001): Inferred 6 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "keyboard_to_frequency:K0|frequency_display:display|Mod0" File: W:/ece241/milestone1/keyboard_frequency/keyboard_to_frequency.v Line: 181
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "keyboard_to_frequency:K0|frequency_display:display|Div0" File: W:/ece241/milestone1/keyboard_frequency/keyboard_to_frequency.v Line: 182
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "keyboard_to_frequency:K0|frequency_display:display|Mod1" File: W:/ece241/milestone1/keyboard_frequency/keyboard_to_frequency.v Line: 182
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "keyboard_to_frequency:K0|frequency_display:display|Div1" File: W:/ece241/milestone1/keyboard_frequency/keyboard_to_frequency.v Line: 183
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "keyboard_to_frequency:K0|frequency_display:display|Mod2" File: W:/ece241/milestone1/keyboard_frequency/keyboard_to_frequency.v Line: 183
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "audio:A0|wave_adder:WA0|Div0" File: W:/ece241/milestone1/audio/wave_generator.v Line: 69
 Info (12130): Elaborated megafunction instantiation "keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod0" File: W:/ece241/milestone1/keyboard_frequency/keyboard_to_frequency.v Line: 181
 Info (12133): Instantiated megafunction "keyboard_to_frequency:K0|frequency_display:display|lpm_divide:Mod0" with the following parameter: File: W:/ece241/milestone1/keyboard_frequency/keyboard_to_frequency.v Line: 181
     Info (12134): Parameter "LPM_WIDTHN" = "10"
@@ -1894,29 +1970,44 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_nlh File: W:/ece241/milestone1/db/sign_div_unsign_nlh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
     Info (12023): Found entity 1: alt_u_div_kve File: W:/ece241/milestone1/db/alt_u_div_kve.tdf Line: 22
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12130): Elaborated megafunction instantiation "audio:A0|wave_adder:WA0|lpm_divide:Div0" File: W:/ece241/milestone1/audio/wave_generator.v Line: 69
+Info (12133): Instantiated megafunction "audio:A0|wave_adder:WA0|lpm_divide:Div0" with the following parameter: File: W:/ece241/milestone1/audio/wave_generator.v Line: 69
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_8po.tdf
+    Info (12023): Found entity 1: lpm_divide_8po File: W:/ece241/milestone1/db/lpm_divide_8po.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_hbg.tdf
+    Info (12023): Found entity 1: abs_divider_hbg File: W:/ece241/milestone1/db/abs_divider_hbg.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ive.tdf
+    Info (12023): Found entity 1: alt_u_div_ive File: W:/ece241/milestone1/db/alt_u_div_ive.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
+    Info (12023): Found entity 1: lpm_abs_kn9 File: W:/ece241/milestone1/db/lpm_abs_kn9.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_1p9.tdf
+    Info (12023): Found entity 1: lpm_abs_1p9 File: W:/ece241/milestone1/db/lpm_abs_1p9.tdf Line: 22
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 133 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance audio:A0|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component|Audio_Clock_altpll:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: W:/ece241/milestone1/db/audio_clock_altpll.v Line: 62
     Info: Must be connected
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[2]" File: W:/ece241/milestone1/top.v Line: 12
-    Warning (15610): No output dependent on input pin "SW[3]" File: W:/ece241/milestone1/top.v Line: 12
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: W:/ece241/milestone1/top.v Line: 21
-Info (21057): Implemented 1207 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
+Info (21057): Implemented 4757 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
     Info (21059): Implemented 34 output pins
     Info (21060): Implemented 6 bidirectional pins
-    Info (21061): Implemented 1094 logic cells
+    Info (21061): Implemented 4632 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21065): Implemented 1 PLLs
-    Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 86 warnings
-    Info: Peak virtual memory: 4895 megabytes
-    Info: Processing ended: Thu Nov 12 11:34:47 2026
-    Info: Elapsed time: 00:02:30
-    Info: Total CPU time (on all processors): 00:00:38
+    Info (21062): Implemented 12 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 85 warnings
+    Info: Peak virtual memory: 4916 megabytes
+    Info: Processing ended: Sat Nov 14 17:37:40 2026
+    Info: Elapsed time: 00:03:38
+    Info: Total CPU time (on all processors): 00:00:51
 
 

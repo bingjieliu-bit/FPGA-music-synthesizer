@@ -9,7 +9,7 @@ module top(CLOCK_50, KEY, SW, PS2_CLK, PS2_DAT,
 	FPGA_I2C_SCLK);
    input CLOCK_50;
 	input [0:0] KEY;
-	input [3:0] SW;
+	input [4:0] SW;
 	
 	inout PS2_CLK;
 	inout PS2_DAT;
@@ -33,7 +33,7 @@ output				AUD_DACDAT;
 
 output				FPGA_I2C_SCLK;
 
-keyboard_to_frequency K0(CLOCK_50, KEY, SW, PS2_CLK, PS2_DAT,
+keyboard_to_frequency K0(CLOCK_50, KEY, SW[4:3], PS2_CLK, PS2_DAT,
 					LEDR, HEX0, HEX1, HEX2, freq_data);
 audio A0(
 	// Inputs
@@ -54,7 +54,7 @@ audio A0(
 	AUD_DACDAT,
 
 	FPGA_I2C_SCLK,
-	SW,
+	SW[2:0],
 	freq_data
 );
 endmodule

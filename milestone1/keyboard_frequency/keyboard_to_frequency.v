@@ -1,9 +1,9 @@
 
-module keyboard_to_frequency( CLOCK_50, KEY, SW, PS2_CLK, PS2_DAT,
+module keyboard_to_frequency( CLOCK_50, KEY, octave_select, PS2_CLK, PS2_DAT,
 					LEDR, HEX0, HEX1, HEX2, freq_data);
 	input CLOCK_50;
 	input [0:0] KEY;
-	input [3:2] SW;
+	input [1:0] octave_select;
 	
 	inout PS2_CLK;
 	inout PS2_DAT;
@@ -37,7 +37,7 @@ module keyboard_to_frequency( CLOCK_50, KEY, SW, PS2_CLK, PS2_DAT,
 		notes_active);
 
 	notes_to_frequency frequencies (
-		notes_active, SW[3:2] ,freq_data
+		notes_active, octave_select ,freq_data
 	);
 
 	// Turn on LEDs for pressed keys

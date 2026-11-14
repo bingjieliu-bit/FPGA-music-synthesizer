@@ -1,0 +1,44 @@
+
+module wave_generator(phase, wave_selector,wave_out);
+	input [31:0] phase;
+	input [1:0] wave_selector;
+	output reg signed [15:0] wave_out;
+	
+	wire signed [15:0] sine_wave;
+	wire signed [15:0] square_wave;
+	sine_generator G0(phase, sine_wave);
+	square_generator G1(phase, square_wave);
+	always @(*)
+		begin
+		case(wave_selector)
+			2'b00:wave_out = square_wave;
+			2'b01:wave_out= sine_wave;
+			
+			default:wave_out = 16'sd0;
+		endcase
+		end
+	
+endmodule
+
+module sine_generator(phase,sine_wave);
+	input [31:0] phase;
+	output signed [15:0] sine_wave;
+	
+	reg signed [15:0] sine_rom[0:1023];
+	initial begin
+		$readmemh("sine1024.hex",sine_rom);
+	end
+	
+	wire [9:0] address;
+	assign address = phase[31:22];
+	assign sine_wave = sine_rom[address];
+endmodule
+
+module square_generator(phase,square_wave);
+	input [31:0] phase;
+	output signed [15:0]square_wave;
+	assign square_wave = phase[31] ? 16'sd23170 : -16'sd23170;
+	
+endmodule
+	
+

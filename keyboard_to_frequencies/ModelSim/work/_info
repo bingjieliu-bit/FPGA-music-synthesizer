@@ -1,0 +1,150 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dW:/ece241/lab3/lab3_part1/ModelSim
+vfrequency_display
+Z0 !s110 1795040724
+!i10b 1
+!s100 4h:CY^AaG@<GfEU>_7TCP0
+IlhVnon0zQ3jdB^;o@7]MG2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dW:/ECE241/FPGA-music-synthesizer-main/keyboard_to_frequencies/ModelSim
+Z3 w1795040072
+Z4 8../keyboard_to_frequency.v
+Z5 F../keyboard_to_frequency.v
+L0 157
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1795040723.000000
+Z8 !s107 ../keyboard_to_frequency.v|
+Z9 !s90 -reportprogress|300|../keyboard_to_frequency.v|
+!i113 1
+Z10 tCvgOpt 0
+vkeyboard_to_frequency
+!s110 1795040723
+!i10b 1
+!s100 H6aEj^5EHED@zMi>3h_;[0
+I25PfXWVWbf3`akAhUHkb80
+R1
+R2
+R3
+R4
+R5
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vkeyboard_to_notes
+R0
+!i10b 1
+!s100 A=2i<25Sh6ei^MO336;S^3
+Inf1OU?XbGUza_i1:YXYF<3
+R1
+R2
+R3
+R4
+R5
+L0 69
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vnotes_to_frequency
+R0
+!i10b 1
+!s100 j4P_l[SeGNHQ>PBkz]BEB0
+Ik_LllQg2YQl>_ISFDFToD1
+R1
+R2
+R3
+R4
+R5
+L0 118
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vpart1
+!s110 1792033800
+!i10b 1
+!s100 @8hF0@bdQTC?o_mEke_SN2
+I_1`a8ZA[CzQ7d449TJfFA1
+R1
+dW:/ECE241/lab3/lab3_part1/ModelSim
+w1792033100
+8../part1.v
+F../part1.v
+L0 1
+R6
+r1
+!s85 0
+31
+!s108 1792033800.000000
+!s107 ../part1.v|
+!s90 -reportprogress|300|../part1.v|
+!i113 1
+R10
+vseg7_display_hex
+R0
+!i10b 1
+!s100 hH`KSNOamlcERSfGJMbK12
+I^5DQJF?1Yo]nc2XoiOmeG2
+R1
+R2
+R3
+R4
+R5
+L0 194
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vtestbench
+!s110 1795040725
+!i10b 1
+!s100 iU[IT;0U]8CD^UF7U2K;g3
+IM;04?hDCKin>^mC94mHT]0
+R1
+R2
+w1795040533
+8testbench.v
+Ftestbench.v
+L0 3
+R6
+r1
+!s85 0
+31
+!s108 1795040724.000000
+!s107 testbench.v|
+!s90 -reportprogress|300|testbench.v|
+!i113 1
+R10

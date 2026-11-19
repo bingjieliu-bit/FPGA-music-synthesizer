@@ -16,7 +16,9 @@ module keyboard_to_frequency( CLOCK_50, KEY, SW, PS2_CLK, PS2_DAT,
 	wire [11:0] notes_active;
 	wire [119:0] freq_data; // 12 note * 10 bit
 
-	// Read keyboard input
+	// PS2_Controller is provided by the ECE241 PS/2 Controller Demo Package.
+	// Source: https://www.eecg.utoronto.ca/~pc/courses/241/DE1_SoC_cores/ps2/ps2.html
+	// Used to receive scan codes from the PS/2 keyboard.
 	PS2_Controller ps2 (
 	  .CLOCK_50(CLOCK_50),
 	  .reset(~KEY[0]),

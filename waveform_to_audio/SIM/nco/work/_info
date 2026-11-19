@@ -1,0 +1,191 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dW:/ece241/lab5/part1_sim/ModelSim
+vD_FF
+Z0 !s110 1794496202
+!i10b 1
+!s100 1EG_G3ba@IRF[4?I__[Ez0
+IS[4NS8C5iJfH1HO3lncKc0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dW:/ece241/lab5/part1/ModelSim
+Z3 w1794093807
+Z4 8../part1.v
+Z5 F../part1.v
+L0 48
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1794496201.000000
+Z8 !s107 ../part1.v|
+Z9 !s90 -reportprogress|300|../part1.v|
+!i113 1
+Z10 tCvgOpt 0
+n@d_@f@f
+vnco
+Z11 !s110 1795048158
+!i10b 1
+!s100 oB2kkDn3[3lNBBT6mN3AX2
+IX`]`D01CQdg8L=zWZKd`o0
+R1
+Z12 dD:/ece241/FPGA-music-synthesizer/waveform_to_audio/SIM/nco
+w1795046180
+8NCO_sampling.v
+FNCO_sampling.v
+L0 1
+R6
+r1
+!s85 0
+31
+Z13 !s108 1795048158.000000
+!s107 NCO_sampling.v|
+!s90 -reportprogress|300|NCO_sampling.v|
+!i113 1
+R10
+vpart1
+R0
+!i10b 1
+!s100 Z`<mSnLh[OJ<h5zW3zA2k3
+If811h9nTjCNV7zWUbUUlE3
+R1
+R2
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vsine_generator
+Z14 !s110 1795031345
+!i10b 1
+!s100 O;_Q7JKMZ<?;__eamiT401
+I>I=ESoG9JHB`gN[:DPZ[A3
+R1
+Z15 dC:/intelFPGA/Quartus_Prime_Standard_18.1/ece241/ModelSim
+w1795030808
+8wave_generator.v
+Fwave_generator.v
+L0 2
+R6
+r1
+!s85 0
+31
+Z16 !s108 1795031345.000000
+!s107 wave_generator.v|
+!s90 -reportprogress|300|wave_generator.v|
+!i113 1
+R10
+vsquare_generator
+Z17 !s110 1795030722
+!i10b 1
+!s100 [34j;=R0n2Y4oDcb8SQbN2
+IeIRP98X_`EVA]:YHjZ1Za1
+R1
+Z18 dW:/ece241/FPGA-music-synthesizer/milestone1/simu/ModelSim
+Z19 w1794695345
+Z20 8../wave_generator.v
+Z21 F../wave_generator.v
+L0 37
+R6
+r1
+!s85 0
+31
+Z22 !s108 1795030721.000000
+Z23 !s107 ../wave_generator.v|
+Z24 !s90 -reportprogress|300|../wave_generator.v|
+!i113 1
+R10
+vtb_sine_generator
+R14
+!i10b 1
+!s100 ;k?zc367<1X;f[D@n8ekV0
+I7>?QR>V@b_8@lH=:i:S9k3
+R1
+R15
+w1795030133
+8tb_sine_generator.v
+Ftb_sine_generator.v
+L0 4
+R6
+r1
+!s85 0
+31
+R16
+!s107 tb_sine_generator.v|
+!s90 -reportprogress|300|tb_sine_generator.v|
+!i113 1
+R10
+vtestbench
+R11
+!i10b 1
+!s100 DZ;T`VX464<^aEoz2fhMG2
+I9L]A8UX2UL8Y0A5OYI4Wg3
+R1
+R12
+w1795047938
+8testbench.v
+Ftestbench.v
+L0 3
+R6
+r1
+!s85 0
+31
+R13
+!s107 testbench.v|
+!s90 -reportprogress|300|testbench.v|
+!i113 1
+R10
+vwave_adder
+R17
+!i10b 1
+!s100 eS7dhOA^nkjSBE15R`ZK@1
+IlD35_4W;jed2SHdajCH1G2
+R1
+R18
+R19
+R20
+R21
+L0 46
+R6
+r1
+!s85 0
+31
+R22
+R23
+R24
+!i113 1
+R10
+vwave_generator
+R17
+!i10b 1
+!s100 ;DAGUOWFkPaR?PQNa=4[Z3
+I=l[GC]1lJFWhVKTea;zSC2
+R1
+R18
+R19
+R20
+R21
+L0 2
+R6
+r1
+!s85 0
+31
+R22
+R23
+R24
+!i113 1
+R10

@@ -20,6 +20,9 @@ module wave_generator(phase, wave_selector,wave_out);
 	
 endmodule
 
+/*reference: https://miscircuitos.com/sinus-wave-generation-with-verilog-using-vivado-for-a-fpga/
+reference the idea of getting pre-calculated sine values and how to read from table"sine1024.hex"*/
+
 module sine_generator(phase,sine_wave);
 	input [31:0] phase;
 	output signed [15:0] sine_wave;

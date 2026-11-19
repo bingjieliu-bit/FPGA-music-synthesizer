@@ -1,3 +1,7 @@
+/*Modified from DE1_SoC_Audio_Example:
+   https://www.eecg.utoronto.ca/~pc/courses/241/DE1_SoC_cores/audio/audio.html
+   keeping the original audio controller, codec configuration, and left/right audio output structure 
+   adding 12-frequency synthesis, selectable waveform generation.*/
 
 module audio (
 	// Inputs

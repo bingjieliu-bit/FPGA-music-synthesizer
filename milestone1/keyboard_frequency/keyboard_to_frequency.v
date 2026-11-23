@@ -1,6 +1,6 @@
 
 module keyboard_to_frequency( CLOCK_50, KEY, octave_select, PS2_CLK, PS2_DAT,
-					LEDR, HEX0, HEX1, HEX2, freq_data);
+					LEDR, HEX0, HEX1, HEX2, HEX3, freq_data, drum_trigger);
 	input CLOCK_50;
 	input [0:0] KEY;
 	input [1:0] octave_select;
@@ -8,13 +8,16 @@ module keyboard_to_frequency( CLOCK_50, KEY, octave_select, PS2_CLK, PS2_DAT,
 	inout PS2_CLK;
 	inout PS2_DAT;
 	
-	output [6:0] HEX0, HEX1, HEX2;
+	output [6:0] HEX0, HEX1, HEX2, HEX3;
 	output [9:0] LEDR;
 
 	wire [7:0] received_data;
 	wire received_data_en;
 	wire [11:0] notes_active;
+	wire [2:0] drums_held;
 	output [119:0] freq_data; // 12 note * 10 bit
+	output [2:0] drum_trigger; //drum[0] = Kick, [1] = Snare, [2] = Hi-hat
+	
 
 	// Read keyboard input
 	PS2_Controller ps2 (
@@ -34,7 +37,8 @@ module keyboard_to_frequency( CLOCK_50, KEY, octave_select, PS2_CLK, PS2_DAT,
 	keyboard_to_notes keyboard (CLOCK_50, ~KEY[0],
 		received_data,
 		received_data_en,
-		notes_active);
+		notes_active,
+		drum_trigger);
 
 	notes_to_frequency frequencies (
 		notes_active, octave_select ,freq_data
@@ -58,53 +62,115 @@ module keyboard_to_frequency( CLOCK_50, KEY, octave_select, PS2_CLK, PS2_DAT,
     notes_active,
     freq_data,
     HEX0, HEX1, HEX2);
+	reg [3:0] drum_digit;
+	reg [24:0] display_counter;
+
+	always @(posedge CLOCK_50) begin
+		 if (~KEY[0]) begin
+			  drum_digit <= 4'hF;
+			  display_counter <= 0;
+		 end
+		 else if (|drum_trigger) begin
+			  if (drum_trigger[0])
+					drum_digit <= 4'd1;
+			  else if (drum_trigger[1])
+					drum_digit <= 4'd2;
+			  else
+					drum_digit <= 4'd3;
+
+			  display_counter <= 25'd25000000;
+		 end
+		 else if (display_counter != 0) begin
+			  display_counter <= display_counter - 1'b1;
+		 end
+		 else begin
+			  drum_digit <= 4'hF;
+		 end
+	end
+
+	seg7_display_hex drum_display (
+		 .x(drum_digit),
+		 .h(HEX3)
+	);
 
 endmodule
 
 
 
 
-module keyboard_to_notes (clk,reset, key_data, new_key, notes_active);
+module keyboard_to_notes (clk, reset, key_data, new_key, notes_active, drum_trigger);
     input clk;
     input reset;
-    input [7:0] key_data; //which key is pressed or released
-    input new_key; // whether new key has arrived
-    output reg [11:0] notes_active;
+    input [7:0] key_data;
+    input new_key;
 
+    output reg [11:0] notes_active;
+    output reg [2:0] drum_trigger;
+	 
+	 reg [2:0] drums_held;
     reg key_released;
 
     always @(posedge clk) begin
-        if (reset) 
-		  begin
+        if (reset) begin
             notes_active <= 12'b0;
+            drum_trigger <= 3'b000;
+				drums_held <= 3'b000;
             key_released <= 0;
         end
-		  
-        else if (new_key) begin
 
-            // F0 means the next key is being released
-            if (key_data == 8'hF0)
-                key_released <= 1;
+        else begin
+            // Clear drum triggers every clock cycle
+            drum_trigger <= 3'b000;
 
-            else begin
-                // 1 = key pressed, 0 = key released
-                case (key_data)
-                    8'h1C: notes_active[0]  <= ~key_released; // A = C
-                    8'h1D: notes_active[1]  <= ~key_released; // W = C#
-                    8'h1B: notes_active[2]  <= ~key_released; // S = D
-                    8'h24: notes_active[3]  <= ~key_released; // E = D#
-                    8'h23: notes_active[4]  <= ~key_released; // D = E
-                    8'h2B: notes_active[5]  <= ~key_released; // F = F
-                    8'h2C: notes_active[6]  <= ~key_released; // T = F#
-                    8'h34: notes_active[7]  <= ~key_released; // G = G
-                    8'h35: notes_active[8]  <= ~key_released; // Y = G#
-                    8'h33: notes_active[9]  <= ~key_released; // H = A
-                    8'h3C: notes_active[10] <= ~key_released; // U = A#
-                    8'h3B: notes_active[11] <= ~key_released; // J = B
-                    default: ;//Nothing
-                endcase
+            if (new_key) begin
 
-                key_released <= 0;
+                // F0 means the next key is being released
+                if (key_data == 8'hF0)
+                    key_released <= 1;
+
+                else begin
+                    // Piano keys
+                    case (key_data)
+							  8'h1C: notes_active[0]  <= ~key_released; // A = C
+							  8'h1D: notes_active[1]  <= ~key_released; // W = C#
+							  8'h1B: notes_active[2]  <= ~key_released; // S = D
+							  8'h24: notes_active[3]  <= ~key_released; // E = D#
+							  8'h23: notes_active[4]  <= ~key_released; // D = E
+							  8'h2B: notes_active[5]  <= ~key_released; // F = F
+							  8'h2C: notes_active[6]  <= ~key_released; // T = F#
+							  8'h34: notes_active[7]  <= ~key_released; // G = G
+							  8'h35: notes_active[8]  <= ~key_released; // Y = G#
+							  8'h33: notes_active[9]  <= ~key_released; // H = A
+							  8'h3C: notes_active[10] <= ~key_released; // U = A#
+							  8'h3B: notes_active[11] <= ~key_released; // J = B
+							default: ;//Nothing
+						endcase
+						
+						//Drum Keys
+						case (key_data)
+							 8'h16: begin // 1 = Kick
+								  if (!key_released && !drums_held[0])
+										drum_trigger[0] <= 1'b1;
+								  drums_held[0] <= ~key_released;
+							 end
+
+							 8'h1E: begin // 2 = Snare
+								  if (!key_released && !drums_held[1])
+										drum_trigger[1] <= 1'b1;
+								  drums_held[1] <= ~key_released;
+							 end
+
+							 8'h26: begin // 3 = Hi-hat
+								  if (!key_released && !drums_held[2])
+										drum_trigger[2] <= 1'b1;
+								  drums_held[2] <= ~key_released;
+							 end
+
+							 default: ;
+						endcase	
+
+						key_released <= 0;
+						end
             end
         end
     end

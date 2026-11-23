@@ -25,9 +25,10 @@ module drum (
         else if (kick_trigger)
             amplitude <= 16'd50000;
 
+        //REQUIRES EDITING FOR VALUES
         else if (sample_tick) begin
-            if (amplitude > 16'd8192)
-                amplitude <= amplitude - (amplitude >> 13);
+            if (amplitude > 16'd8192) //maybe lower
+                amplitude <= amplitude - (amplitude >> 12);
             else
                 amplitude <= 16'd0;
         end

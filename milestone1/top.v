@@ -1,5 +1,5 @@
 module top(CLOCK_50, KEY, SW, PS2_CLK, PS2_DAT,
-					LEDR, HEX0, HEX1, HEX2, AUD_BCLK,
+					LEDR, HEX0, HEX1, HEX2, HEX3, AUD_BCLK,
 	AUD_ADCLRCK,
 	AUD_DACLRCK, AUD_ADCDAT,AUD_XCK,
 	FPGA_I2C_SDAT,
@@ -22,11 +22,12 @@ VGA_BLANK_N,
 	inout PS2_CLK;
 	inout PS2_DAT;
 	
-	output [6:0] HEX0, HEX1, HEX2;
+	output [6:0] HEX0, HEX1, HEX2, HEX3;
 	output [9:0] LEDR;
 
 	wire [119:0] freq_data; // 12 note * 10 bit
 	wire [11:0] active_note;
+	wire [2:0] drum_trigger;
 	input				AUD_ADCDAT;
 
 // Bidirectionals
@@ -52,11 +53,12 @@ output				FPGA_I2C_SCLK;
     output VGA_CLK;
 
 keyboard_to_frequency K0(CLOCK_50, KEY, SW[4:3], PS2_CLK, PS2_DAT,
-					LEDR, HEX0, HEX1, HEX2,active_note, freq_data);
+					LEDR, HEX0, HEX1, HEX2,active_note, freq_data, drum_trigger);
 audio A0(
 	// Inputs
 	CLOCK_50,
 	KEY,
+	drum_trigger,
 
 	AUD_ADCDAT,
 

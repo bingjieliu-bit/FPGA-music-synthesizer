@@ -3,115 +3,163 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -25.042
-TNS   : -397.527
+Slack : -28.652
+TNS   : -457.374
 
 Type  : Slow 1100mV 85C Model Setup 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
-Slack : -2.252
-TNS   : -114.030
+Slack : -2.143
+TNS   : -128.226
+
+Type  : Slow 1100mV 85C Model Setup 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 26.484
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.219
+Slack : 0.222
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.376
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.446
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
 Slack : -0.394
-TNS   : -35.361
+TNS   : -37.123
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'A0|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.840
+Slack : 8.763
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.752
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -26.440
-TNS   : -419.643
+Slack : -29.912
+TNS   : -477.168
 
 Type  : Slow 1100mV 0C Model Setup 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
-Slack : -2.241
-TNS   : -111.504
+Slack : -2.185
+TNS   : -124.022
+
+Type  : Slow 1100mV 0C Model Setup 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 27.100
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.209
+Slack : 0.213
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.386
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.425
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
 Slack : -0.394
-TNS   : -34.899
+TNS   : -36.365
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'A0|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.796
+Slack : 8.753
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.732
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -5.028
-TNS   : -78.505
+Slack : -7.183
+TNS   : -115.731
 
 Type  : Fast 1100mV 85C Model Setup 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
-Slack : -0.979
-TNS   : -49.507
+Slack : -1.050
+TNS   : -53.743
+
+Type  : Fast 1100mV 85C Model Setup 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 30.387
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.131
+Slack : 0.129
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.136
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.245
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.041
+Slack : 0.071
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'A0|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.820
+Slack : 8.789
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.879
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -3.699
-TNS   : -57.068
+Slack : -5.662
+TNS   : -91.004
 
 Type  : Fast 1100mV 0C Model Setup 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
-Slack : -0.874
-TNS   : -42.206
+Slack : -0.913
+TNS   : -45.624
+
+Type  : Fast 1100mV 0C Model Setup 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 31.642
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.121
+Slack : 0.119
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.124
+Slack : 0.130
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.222
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'audio:A0|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.068
+Slack : 0.091
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'A0|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.813
+Slack : 8.782
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.880
 TNS   : 0.000
 
 ------------------------------------------------------------

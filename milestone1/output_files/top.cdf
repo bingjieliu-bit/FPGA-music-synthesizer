@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("W:/ece241/milestone1/output_files/") File("top.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("W:/ece241/FPGA-music-synthesizer/milestone1/output_files/") File("top.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

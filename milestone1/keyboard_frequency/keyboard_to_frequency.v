@@ -1,6 +1,6 @@
 
 module keyboard_to_frequency( CLOCK_50, KEY, octave_select, PS2_CLK, PS2_DAT,
-					LEDR, HEX0, HEX1, HEX2, freq_data);
+					LEDR, HEX0, HEX1, HEX2, notes_active,freq_data);
 	input CLOCK_50;
 	input [0:0] KEY;
 	input [1:0] octave_select;
@@ -13,7 +13,7 @@ module keyboard_to_frequency( CLOCK_50, KEY, octave_select, PS2_CLK, PS2_DAT,
 
 	wire [7:0] received_data;
 	wire received_data_en;
-	wire [11:0] notes_active;
+	output [11:0] notes_active;
 	output [119:0] freq_data; // 12 note * 10 bit
 
 	// Read keyboard input

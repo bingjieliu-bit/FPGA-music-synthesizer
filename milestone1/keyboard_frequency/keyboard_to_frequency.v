@@ -1,6 +1,6 @@
 
 module keyboard_to_frequency( CLOCK_50, KEY, octave_select, PS2_CLK, PS2_DAT,
-					LEDR, HEX0, HEX1, HEX2, HEX3, freq_data, drum_trigger);
+					LEDR, HEX0, HEX1, HEX2, notes_active,freq_data, drum_trigger);
 	input CLOCK_50;
 	input [0:0] KEY;
 	input [1:0] octave_select;
@@ -13,7 +13,7 @@ module keyboard_to_frequency( CLOCK_50, KEY, octave_select, PS2_CLK, PS2_DAT,
 
 	wire [7:0] received_data;
 	wire received_data_en;
-	wire [11:0] notes_active;
+	output [11:0] notes_active;
 	wire [2:0] drums_held;
 	output [119:0] freq_data; // 12 note * 10 bit
 	output [2:0] drum_trigger; //drum[0] = Kick, [1] = Snare, [2] = Hi-hat

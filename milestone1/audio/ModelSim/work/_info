@@ -1,0 +1,170 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dW:/ece241/lab3/lab3_part1/ModelSim
+vdrum
+Z0 !s110 1795628528
+!i10b 1
+!s100 AzMOoiEF__LLz]R?@?3V;0
+I;7>SHSDXWFWX4zkIL<gfF1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dW:/ECE241/Project/FPGA-music-synthesizer/milestone1/audio/ModelSim
+w1795627446
+8../drum.v
+F../drum.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1795628528.000000
+Z5 !s107 testbench.v|../drum.v|
+Z6 !s90 -reportprogress|300|../drum.v|testbench.v|
+!i113 1
+Z7 tCvgOpt 0
+vfrequency_display
+Z8 !s110 1795040724
+!i10b 1
+!s100 4h:CY^AaG@<GfEU>_7TCP0
+IlhVnon0zQ3jdB^;o@7]MG2
+R1
+Z9 dW:/ECE241/FPGA-music-synthesizer-main/keyboard_to_frequencies/ModelSim
+Z10 w1795040072
+Z11 8../keyboard_to_frequency.v
+Z12 F../keyboard_to_frequency.v
+L0 157
+R3
+r1
+!s85 0
+31
+Z13 !s108 1795040723.000000
+Z14 !s107 ../keyboard_to_frequency.v|
+Z15 !s90 -reportprogress|300|../keyboard_to_frequency.v|
+!i113 1
+R7
+vkeyboard_to_frequency
+!s110 1795040723
+!i10b 1
+!s100 H6aEj^5EHED@zMi>3h_;[0
+I25PfXWVWbf3`akAhUHkb80
+R1
+R9
+R10
+R11
+R12
+L0 2
+R3
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 1
+R7
+vkeyboard_to_notes
+R8
+!i10b 1
+!s100 A=2i<25Sh6ei^MO336;S^3
+Inf1OU?XbGUza_i1:YXYF<3
+R1
+R9
+R10
+R11
+R12
+L0 69
+R3
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 1
+R7
+vnotes_to_frequency
+R8
+!i10b 1
+!s100 j4P_l[SeGNHQ>PBkz]BEB0
+Ik_LllQg2YQl>_ISFDFToD1
+R1
+R9
+R10
+R11
+R12
+L0 118
+R3
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 1
+R7
+vpart1
+!s110 1792033800
+!i10b 1
+!s100 @8hF0@bdQTC?o_mEke_SN2
+I_1`a8ZA[CzQ7d449TJfFA1
+R1
+dW:/ECE241/lab3/lab3_part1/ModelSim
+w1792033100
+8../part1.v
+F../part1.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1792033800.000000
+!s107 ../part1.v|
+!s90 -reportprogress|300|../part1.v|
+!i113 1
+R7
+vseg7_display_hex
+R8
+!i10b 1
+!s100 hH`KSNOamlcERSfGJMbK12
+I^5DQJF?1Yo]nc2XoiOmeG2
+R1
+R9
+R10
+R11
+R12
+L0 194
+R3
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 1
+R7
+vtestbench
+R0
+!i10b 1
+!s100 f65:0RP4QF@Plj4<Jgm3?2
+ITcEdQ?2AB@BBBdJ`EE>Kf2
+R1
+R2
+w1795628383
+8testbench.v
+Ftestbench.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7

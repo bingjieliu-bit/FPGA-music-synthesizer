@@ -1,6 +1,6 @@
 
 module keyboard_to_frequency( CLOCK_50, KEY, octave_select, PS2_CLK, PS2_DAT,
-					LEDR, HEX0, HEX1, HEX2, notes_active,freq_data, drum_trigger);
+					LEDR, HEX0, HEX1, HEX2, HEX3, notes_active,freq_data, drum_trigger);
 	input CLOCK_50;
 	input [0:0] KEY;
 	input [1:0] octave_select;

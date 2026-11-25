@@ -1,6 +1,6 @@
 Timing Analyzer report for top
-Tue Nov 24 16:08:42 2026
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Wed Nov 25 12:59:28 2026
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -61,9 +61,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -73,22 +73,23 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                         ;
-+-----------------------+---------------------------------------------------------+
-; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                                  ;
-; Revision Name         ; top                                                     ;
-; Device Family         ; Cyclone V                                               ;
-; Device Name           ; 5CSEMA5F31C6                                            ;
-; Timing Models         ; Final                                                   ;
-; Delay Model           ; Combined                                                ;
-; Rise/Fall Delays      ; Enabled                                                 ;
-+-----------------------+---------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                        ;
++-----------------------+--------------------------------------------------------+
+; Quartus Prime Version ; Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                 ;
+; Revision Name         ; top                                                    ;
+; Device Family         ; Cyclone V                                              ;
+; Device Name           ; 5CSEMA5F31C6                                           ;
+; Timing Models         ; Final                                                  ;
+; Delay Model           ; Combined                                               ;
+; Rise/Fall Delays      ; Enabled                                                ;
++-----------------------+--------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -99,16 +100,16 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 2.61        ;
+; Average used               ; 2.91        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  33.3%      ;
-;     Processor 3            ;  33.1%      ;
-;     Processor 4            ;  33.0%      ;
-;     Processor 5            ;  30.6%      ;
-;     Processor 6            ;  30.6%      ;
+;     Processor 2            ;  39.7%      ;
+;     Processor 3            ;  39.5%      ;
+;     Processor 4            ;  39.5%      ;
+;     Processor 5            ;  36.3%      ;
+;     Processor 6            ;  36.3%      ;
 +----------------------------+-------------+
 
 
@@ -130,9 +131,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-------------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                          ; Note ;
 +------------+-----------------+-------------------------------------------------------------------------------------+------+
-; 20.55 MHz  ; 20.55 MHz       ; CLOCK_50                                                                            ;      ;
-; 73.99 MHz  ; 73.99 MHz       ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 318.17 MHz ; 318.17 MHz      ; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ;      ;
+; 12.0 MHz   ; 12.0 MHz        ; CLOCK_50                                                                            ;      ;
+; 83.47 MHz  ; 83.47 MHz       ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 307.69 MHz ; 307.69 MHz      ; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ;      ;
 +------------+-----------------+-------------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -148,9 +149,9 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                               ; Slack   ; End Point TNS ;
 +-------------------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                                            ; -28.652 ; -457.374      ;
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -2.143  ; -128.226      ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 26.484  ; 0.000         ;
+; CLOCK_50                                                                            ; -63.347 ; -1038.429     ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -2.250  ; -127.735      ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 28.019  ; 0.000         ;
 +-------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -159,9 +160,9 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                               ; Slack ; End Point TNS ;
 +-------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                            ; 0.222 ; 0.000         ;
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.391 ; 0.000         ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.446 ; 0.000         ;
+; CLOCK_50                                                                            ; 0.223 ; 0.000         ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.382 ; 0.000         ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.437 ; 0.000         ;
 +-------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -182,10 +183,10 @@ No paths to report.
 +-------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                               ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------+--------+---------------+
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -0.394 ; -37.123       ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -0.394 ; -37.254       ;
 ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                            ; 8.763  ; 0.000         ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.752 ; 0.000         ;
+; CLOCK_50                                                                            ; 8.857  ; 0.000         ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.754 ; 0.000         ;
 +-------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -200,9 +201,9 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                          ; Note ;
 +------------+-----------------+-------------------------------------------------------------------------------------+------+
-; 20.04 MHz  ; 20.04 MHz       ; CLOCK_50                                                                            ;      ;
-; 77.52 MHz  ; 77.52 MHz       ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 313.97 MHz ; 313.97 MHz      ; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ;      ;
+; 11.62 MHz  ; 11.62 MHz       ; CLOCK_50                                                                            ;      ;
+; 87.77 MHz  ; 87.77 MHz       ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 309.69 MHz ; 309.69 MHz      ; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ;      ;
 +------------+-----------------+-------------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -212,9 +213,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                               ; Slack   ; End Point TNS ;
 +-------------------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                                            ; -29.912 ; -477.168      ;
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -2.185  ; -124.022      ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 27.100  ; 0.000         ;
+; CLOCK_50                                                                            ; -66.094 ; -1071.772     ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -2.229  ; -124.384      ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 28.606  ; 0.000         ;
 +-------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -224,8 +225,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock                                                                               ; Slack ; End Point TNS ;
 +-------------------------------------------------------------------------------------+-------+---------------+
 ; CLOCK_50                                                                            ; 0.213 ; 0.000         ;
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.395 ; 0.000         ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.425 ; 0.000         ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.387 ; 0.000         ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.412 ; 0.000         ;
 +-------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -246,9 +247,9 @@ No paths to report.
 +-------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                               ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------+--------+---------------+
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -0.394 ; -36.365       ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -0.394 ; -36.807       ;
 ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                            ; 8.753  ; 0.000         ;
+; CLOCK_50                                                                            ; 8.807  ; 0.000         ;
 ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.732 ; 0.000         ;
 +-------------------------------------------------------------------------------------+--------+---------------+
 
@@ -259,15 +260,15 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Setup Summary                                                                          ;
-+-------------------------------------------------------------------------------------+--------+---------------+
-; Clock                                                                               ; Slack  ; End Point TNS ;
-+-------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                            ; -7.183 ; -115.731      ;
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -1.050 ; -53.743       ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 30.387 ; 0.000         ;
-+-------------------------------------------------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                                                                           ;
++-------------------------------------------------------------------------------------+---------+---------------+
+; Clock                                                                               ; Slack   ; End Point TNS ;
++-------------------------------------------------------------------------------------+---------+---------------+
+; CLOCK_50                                                                            ; -25.805 ; -414.018      ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -1.081  ; -54.044       ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 31.376  ; 0.000         ;
++-------------------------------------------------------------------------------------+---------+---------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -275,8 +276,8 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                               ; Slack ; End Point TNS ;
 +-------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                            ; 0.129 ; 0.000         ;
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.144 ; 0.000         ;
+; CLOCK_50                                                                            ; 0.130 ; 0.000         ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.140 ; 0.000         ;
 ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.245 ; 0.000         ;
 +-------------------------------------------------------------------------------------+-------+---------------+
 
@@ -298,10 +299,10 @@ No paths to report.
 +-------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                               ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------+--------+---------------+
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.071  ; 0.000         ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.021  ; 0.000         ;
 ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                            ; 8.789  ; 0.000         ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.879 ; 0.000         ;
+; CLOCK_50                                                                            ; 8.788  ; 0.000         ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.876 ; 0.000         ;
 +-------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -311,15 +312,15 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Fast 1100mV 0C Model Setup Summary                                                                           ;
-+-------------------------------------------------------------------------------------+--------+---------------+
-; Clock                                                                               ; Slack  ; End Point TNS ;
-+-------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                            ; -5.662 ; -91.004       ;
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -0.913 ; -45.624       ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 31.642 ; 0.000         ;
-+-------------------------------------------------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                                                                            ;
++-------------------------------------------------------------------------------------+---------+---------------+
+; Clock                                                                               ; Slack   ; End Point TNS ;
++-------------------------------------------------------------------------------------+---------+---------------+
+; CLOCK_50                                                                            ; -23.324 ; -373.209      ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -0.939  ; -46.438       ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 32.548  ; 0.000         ;
++-------------------------------------------------------------------------------------+---------+---------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -327,9 +328,9 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                               ; Slack ; End Point TNS ;
 +-------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                            ; 0.119 ; 0.000         ;
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.130 ; 0.000         ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.222 ; 0.000         ;
+; CLOCK_50                                                                            ; 0.120 ; 0.000         ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.129 ; 0.000         ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.218 ; 0.000         ;
 +-------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -350,10 +351,10 @@ No paths to report.
 +-------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                               ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------+--------+---------------+
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.091  ; 0.000         ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.050  ; 0.000         ;
 ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                            ; 8.782  ; 0.000         ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.880 ; 0.000         ;
+; CLOCK_50                                                                            ; 8.779  ; 0.000         ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.881 ; 0.000         ;
 +-------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -363,22 +364,22 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                                                                ;
-+--------------------------------------------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                                                                                ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+--------------------------------------------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                                                     ; -29.912  ; 0.119 ; N/A      ; N/A     ; -0.394              ;
-;  CLOCK_50                                                                            ; -29.912  ; 0.119 ; N/A      ; N/A     ; 8.753               ;
-;  V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A      ; N/A   ; N/A      ; N/A     ; 1.666               ;
-;  V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 26.484   ; 0.222 ; N/A      ; N/A     ; 18.732              ;
-;  audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -2.185   ; 0.130 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS                                                                      ; -601.19  ; 0.0   ; 0.0      ; 0.0     ; -37.123             ;
-;  CLOCK_50                                                                            ; -477.168 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A      ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.000    ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -128.226 ; 0.000 ; N/A      ; N/A     ; -37.123             ;
-+--------------------------------------------------------------------------------------+----------+-------+----------+---------+---------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                                                 ;
++--------------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
+; Clock                                                                                ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack                                                                     ; -66.094   ; 0.120 ; N/A      ; N/A     ; -0.394              ;
+;  CLOCK_50                                                                            ; -66.094   ; 0.120 ; N/A      ; N/A     ; 8.779               ;
+;  V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A   ; N/A      ; N/A     ; 1.666               ;
+;  V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 28.019    ; 0.218 ; N/A      ; N/A     ; 18.732              ;
+;  audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -2.250    ; 0.129 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS                                                                      ; -1196.156 ; 0.0   ; 0.0      ; 0.0     ; -37.254             ;
+;  CLOCK_50                                                                            ; -1071.772 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.000     ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; -127.735  ; 0.000 ; N/A      ; N/A     ; -37.254             ;
++--------------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -417,6 +418,13 @@ No synchronizer chains to report.
 ; HEX2[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX2[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX2[6]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX3[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX3[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX3[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX3[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX3[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX3[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX3[6]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; AUD_XCK       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; AUD_DACDAT    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; FPGA_I2C_SCLK ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -475,8 +483,8 @@ No synchronizer chains to report.
 ; CLOCK_50      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[0]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[0]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[1]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[2]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[1]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +---------------+--------------+-----------------+-----------------+
 
 
@@ -516,6 +524,13 @@ No synchronizer chains to report.
 ; HEX2[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; HEX2[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; HEX2[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; HEX3[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; HEX3[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; HEX3[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; HEX3[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; HEX3[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; HEX3[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; HEX3[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; AUD_XCK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; AUD_DACDAT    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; FPGA_I2C_SCLK ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
@@ -593,6 +608,13 @@ No synchronizer chains to report.
 ; HEX2[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; HEX2[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; HEX2[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; HEX3[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; HEX3[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; HEX3[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; HEX3[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; HEX3[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; HEX3[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; HEX3[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; AUD_XCK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; AUD_DACDAT    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; FPGA_I2C_SCLK ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
@@ -670,6 +692,13 @@ No synchronizer chains to report.
 ; HEX2[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; HEX2[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; HEX2[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX3[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; HEX3[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; HEX3[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; HEX3[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; HEX3[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX3[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; HEX3[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; AUD_XCK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; AUD_DACDAT    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; FPGA_I2C_SCLK ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
@@ -747,6 +776,13 @@ No synchronizer chains to report.
 ; HEX2[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; HEX2[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 ; HEX2[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX3[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; HEX3[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; HEX3[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; HEX3[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; HEX3[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX3[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; HEX3[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; AUD_XCK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; AUD_DACDAT    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; FPGA_I2C_SCLK ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
@@ -793,10 +829,10 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                                          ; To Clock                                                                            ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+--------------+----------+----------+----------+
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 799          ; 0        ; 0        ; 0        ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 778          ; 0        ; 0        ; 0        ;
 ; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; CLOCK_50                                                                            ; 1            ; 1        ; 0        ; 0        ;
 ; CLOCK_50                                                                            ; CLOCK_50                                                                            ; > 2147483647 ; 0        ; 0        ; 0        ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 95568        ; 0        ; 0        ; 0        ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 95384        ; 0        ; 0        ; 0        ;
 +-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -806,10 +842,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                                          ; To Clock                                                                            ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+--------------+----------+----------+----------+
-; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 799          ; 0        ; 0        ; 0        ;
+; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; 778          ; 0        ; 0        ; 0        ;
 ; audio:A0|avconf:avc|mI2C_CTRL_CLK                                                   ; CLOCK_50                                                                            ; 1            ; 1        ; 0        ; 0        ;
 ; CLOCK_50                                                                            ; CLOCK_50                                                                            ; > 2147483647 ; 0        ; 0        ; 0        ;
-; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 95568        ; 0        ; 0        ; 0        ;
+; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 95384        ; 0        ; 0        ; 0        ;
 +-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -834,9 +870,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 11    ; 11   ;
-; Unconstrained Input Port Paths  ; 1684  ; 1684 ;
-; Unconstrained Output Ports      ; 59    ; 59   ;
-; Unconstrained Output Port Paths ; 1374  ; 1374 ;
+; Unconstrained Input Port Paths  ; 1808  ; 1808 ;
+; Unconstrained Output Ports      ; 66    ; 66   ;
+; Unconstrained Output Port Paths ; 1395  ; 1395 ;
 +---------------------------------+-------+------+
 
 
@@ -902,6 +938,13 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX2[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -988,6 +1031,13 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX2[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1030,8 +1080,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue Nov 24 16:07:51 2026
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Wed Nov 25 12:58:39 2026
 Info: Command: quartus_sta top -c top
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
@@ -1631,27 +1681,27 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -28.652
+Info (332146): Worst-case setup slack is -63.347
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -28.652            -457.374 CLOCK_50 
-    Info (332119):    -2.143            -128.226 audio:A0|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    26.484               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.222
+    Info (332119):   -63.347           -1038.429 CLOCK_50 
+    Info (332119):    -2.250            -127.735 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    28.019               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.223
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.222               0.000 CLOCK_50 
-    Info (332119):     0.391               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):     0.446               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.223               0.000 CLOCK_50 
+    Info (332119):     0.382               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.437               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -37.123 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    -0.394             -37.254 audio:A0|avconf:avc|mI2C_CTRL_CLK 
     Info (332119):     1.666               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.763               0.000 CLOCK_50 
-    Info (332119):    18.752               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.857               0.000 CLOCK_50 
+    Info (332119):    18.754               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1663,26 +1713,26 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -29.912
+Info (332146): Worst-case setup slack is -66.094
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -29.912            -477.168 CLOCK_50 
-    Info (332119):    -2.185            -124.022 audio:A0|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    27.100               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):   -66.094           -1071.772 CLOCK_50 
+    Info (332119):    -2.229            -124.384 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    28.606               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332146): Worst-case hold slack is 0.213
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.213               0.000 CLOCK_50 
-    Info (332119):     0.395               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):     0.425               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.387               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.412               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -36.365 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    -0.394             -36.807 audio:A0|avconf:avc|mI2C_CTRL_CLK 
     Info (332119):     1.666               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.753               0.000 CLOCK_50 
+    Info (332119):     8.807               0.000 CLOCK_50 
     Info (332119):    18.732               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
@@ -1695,27 +1745,27 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.183
+Info (332146): Worst-case setup slack is -25.805
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.183            -115.731 CLOCK_50 
-    Info (332119):    -1.050             -53.743 audio:A0|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    30.387               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.129
+    Info (332119):   -25.805            -414.018 CLOCK_50 
+    Info (332119):    -1.081             -54.044 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    31.376               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.130
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.129               0.000 CLOCK_50 
-    Info (332119):     0.144               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.130               0.000 CLOCK_50 
+    Info (332119):     0.140               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
     Info (332119):     0.245               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 0.071
+Info (332146): Worst-case minimum pulse width slack is 0.021
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.071               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.021               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
     Info (332119):     1.666               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.789               0.000 CLOCK_50 
-    Info (332119):    18.879               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.788               0.000 CLOCK_50 
+    Info (332119):    18.876               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: A0|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
@@ -1725,33 +1775,33 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.662
+Info (332146): Worst-case setup slack is -23.324
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.662             -91.004 CLOCK_50 
-    Info (332119):    -0.913             -45.624 audio:A0|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    31.642               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.119
+    Info (332119):   -23.324            -373.209 CLOCK_50 
+    Info (332119):    -0.939             -46.438 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    32.548               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.120
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.119               0.000 CLOCK_50 
-    Info (332119):     0.130               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):     0.222               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.120               0.000 CLOCK_50 
+    Info (332119):     0.129               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.218               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 0.091
+Info (332146): Worst-case minimum pulse width slack is 0.050
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.091               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.050               0.000 audio:A0|avconf:avc|mI2C_CTRL_CLK 
     Info (332119):     1.666               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.782               0.000 CLOCK_50 
-    Info (332119):    18.880               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.779               0.000 CLOCK_50 
+    Info (332119):    18.881               0.000 V0|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 578 warnings
-    Info: Peak virtual memory: 5500 megabytes
-    Info: Processing ended: Tue Nov 24 16:08:42 2026
-    Info: Elapsed time: 00:00:51
-    Info: Total CPU time (on all processors): 00:01:10
+    Info: Peak virtual memory: 5942 megabytes
+    Info: Processing ended: Wed Nov 25 12:59:28 2026
+    Info: Elapsed time: 00:00:49
+    Info: Total CPU time (on all processors): 00:01:39
 
 

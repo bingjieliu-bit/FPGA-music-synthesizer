@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:04:49  NOVEMBER 12, 2026"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Standard Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -312,29 +312,6 @@ set_location_assignment PIN_E12 -to VGA_R[6]
 set_location_assignment PIN_F13 -to VGA_R[7]
 set_location_assignment PIN_C10 -to VGA_SYNC_N
 set_location_assignment PIN_D11 -to VGA_VS
-set_global_assignment -name VERILOG_FILE object/vga_adapter/vga_pll.v
-set_global_assignment -name VERILOG_FILE object/vga_adapter/vga_controller.v
-set_global_assignment -name VERILOG_FILE object/vga_adapter/vga_address_translator.v
-set_global_assignment -name VERILOG_FILE object/vga_adapter/vga_adapter.v
-set_global_assignment -name VERILOG_FILE object/vga_demo.v
-set_global_assignment -name VERILOG_FILE object/object_mems.v
-set_global_assignment -name VERILOG_FILE keyboard_frequency/keyboard_to_frequency.v
-set_global_assignment -name VERILOG_FILE keyboard_frequency/PS2_Controller.v
-set_global_assignment -name VERILOG_FILE keyboard_frequency/Altera_UP_PS2_Data_In.v
-set_global_assignment -name VERILOG_FILE keyboard_frequency/Altera_UP_PS2_Command_Out.v
-set_global_assignment -name VERILOG_FILE audio/avconf/I2C_Controller.v
-set_global_assignment -name VERILOG_FILE audio/avconf/avconf.v
-set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Audio_Controller.v
-set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Audio_Clock.v
-set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Altera_UP_SYNC_FIFO.v
-set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Altera_UP_Clock_Edge.v
-set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Altera_UP_Audio_Out_Serializer.v
-set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Altera_UP_Audio_In_Deserializer.v
-set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Altera_UP_Audio_Bit_Counter.v
-set_global_assignment -name VERILOG_FILE audio/wave_generator.v
-set_global_assignment -name VERILOG_FILE audio/NCO_sampling.v
-set_global_assignment -name VERILOG_FILE audio/audio.v
-set_global_assignment -name VERILOG_FILE top.v
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CS_N -entity DE1_SoC
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_DIN -entity DE1_SoC
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_DOUT -entity DE1_SoC
@@ -906,4 +883,28 @@ set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_WE_N -e
 set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_RESET_N -entity DE1_SoC
 set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_CK_P -entity DE1_SoC
 set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_CK_N -entity DE1_SoC
+set_global_assignment -name VERILOG_FILE audio/drum.v
+set_global_assignment -name VERILOG_FILE object/vga_adapter/vga_pll.v
+set_global_assignment -name VERILOG_FILE object/vga_adapter/vga_controller.v
+set_global_assignment -name VERILOG_FILE object/vga_adapter/vga_address_translator.v
+set_global_assignment -name VERILOG_FILE object/vga_adapter/vga_adapter.v
+set_global_assignment -name VERILOG_FILE object/vga_demo.v
+set_global_assignment -name VERILOG_FILE object/object_mems.v
+set_global_assignment -name VERILOG_FILE keyboard_frequency/keyboard_to_frequency.v
+set_global_assignment -name VERILOG_FILE keyboard_frequency/PS2_Controller.v
+set_global_assignment -name VERILOG_FILE keyboard_frequency/Altera_UP_PS2_Data_In.v
+set_global_assignment -name VERILOG_FILE keyboard_frequency/Altera_UP_PS2_Command_Out.v
+set_global_assignment -name VERILOG_FILE audio/avconf/I2C_Controller.v
+set_global_assignment -name VERILOG_FILE audio/avconf/avconf.v
+set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Audio_Controller.v
+set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Audio_Clock.v
+set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Altera_UP_SYNC_FIFO.v
+set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Altera_UP_Clock_Edge.v
+set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Altera_UP_Audio_Out_Serializer.v
+set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Altera_UP_Audio_In_Deserializer.v
+set_global_assignment -name VERILOG_FILE audio/Audio_Controller/Altera_UP_Audio_Bit_Counter.v
+set_global_assignment -name VERILOG_FILE audio/wave_generator.v
+set_global_assignment -name VERILOG_FILE audio/NCO_sampling.v
+set_global_assignment -name VERILOG_FILE audio/audio.v
+set_global_assignment -name VERILOG_FILE top.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

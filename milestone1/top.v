@@ -53,7 +53,7 @@ output				FPGA_I2C_SCLK;
     output VGA_CLK;
 
 keyboard_to_frequency K0(CLOCK_50, KEY, SW[4:3], PS2_CLK, PS2_DAT,
-					LEDR, HEX0, HEX1, HEX2,active_note, freq_data, drum_trigger);
+					LEDR, HEX0, HEX1, HEX2, HEX3, active_note, freq_data, drum_trigger);
 audio A0(
 	// Inputs
 	CLOCK_50,

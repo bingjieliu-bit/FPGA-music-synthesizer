@@ -1,6 +1,6 @@
 Flow report for top
-Tue Nov 24 16:09:20 2026
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Wed Nov 25 13:00:21 2026
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -21,9 +21,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -33,33 +33,34 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Flow Summary                                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Tue Nov 24 16:09:19 2026           ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Revision Name                   ; top                                             ;
-; Top-level Entity Name           ; top                                             ;
-; Family                          ; Cyclone V                                       ;
-; Device                          ; 5CSEMA5F31C6                                    ;
-; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 12,298 / 32,070 ( 38 % )                        ;
-; Total registers                 ; 830                                             ;
-; Total pins                      ; 77 / 457 ( 17 % )                               ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 2,789,624 / 4,065,280 ( 69 % )                  ;
-; Total DSP Blocks                ; 14 / 87 ( 16 % )                                ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 1 / 6 ( 17 % )                                  ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
-+---------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++---------------------------------+------------------------------------------------+
+; Flow Status                     ; Successful - Wed Nov 25 13:00:21 2026          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; top                                            ;
+; Top-level Entity Name           ; top                                            ;
+; Family                          ; Cyclone V                                      ;
+; Device                          ; 5CSEMA5F31C6                                   ;
+; Timing Models                   ; Final                                          ;
+; Logic utilization (in ALMs)     ; 28,039 / 32,070 ( 87 % )                       ;
+; Total registers                 ; 954                                            ;
+; Total pins                      ; 84 / 457 ( 18 % )                              ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 2,789,624 / 4,065,280 ( 69 % )                 ;
+; Total DSP Blocks                ; 14 / 87 ( 16 % )                               ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 1 / 6 ( 17 % )                                 ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
++---------------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +68,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/24/2026 15:49:09 ;
+; Start date & time ; 11/25/2026 12:35:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top                 ;
 +-------------------+---------------------+
@@ -78,7 +79,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 93181000666643.179555334823264         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 93181000666178.179562812109240         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; QuestaSim (Verilog)                    ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -98,12 +99,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:09:18     ; 1.0                     ; 5109 MB             ; 00:02:25                           ;
-; Fitter               ; 00:07:56     ; 1.2                     ; 7204 MB             ; 00:19:59                           ;
-; Assembler            ; 00:00:24     ; 1.0                     ; 5007 MB             ; 00:00:16                           ;
-; Timing Analyzer      ; 00:00:50     ; 2.6                     ; 5500 MB             ; 00:01:10                           ;
-; EDA Netlist Writer   ; 00:00:34     ; 1.0                     ; 4978 MB             ; 00:00:13                           ;
-; Total                ; 00:19:02     ; --                      ; --                  ; 00:24:03                           ;
+; Analysis & Synthesis ; 00:03:51     ; 1.0                     ; 5462 MB             ; 00:03:09                           ;
+; Fitter               ; 00:18:10     ; 1.1                     ; 7379 MB             ; 00:42:46                           ;
+; Assembler            ; 00:00:30     ; 1.0                     ; 5513 MB             ; 00:00:25                           ;
+; Timing Analyzer      ; 00:00:46     ; 2.9                     ; 5942 MB             ; 00:01:39                           ;
+; EDA Netlist Writer   ; 00:00:50     ; 1.0                     ; 5212 MB             ; 00:00:24                           ;
+; Total                ; 00:24:07     ; --                      ; --                  ; 00:48:23                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,11 +113,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; BA3135WS30       ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; BA3135WS30       ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; BA3135WS30       ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; BA3135WS30       ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; BA3135WS30       ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; BA3135WS29       ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; BA3135WS29       ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; BA3135WS29       ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; BA3135WS29       ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; BA3135WS29       ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

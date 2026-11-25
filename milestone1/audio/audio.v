@@ -113,11 +113,6 @@ end
 
 //frequency to phase
 	wire [31:0] phase_increment [0:11];
-	wire [31:0] kick_increment;
-	wire [31:0] kick_phase;
-	wire [9:0] kick_freq;
-	assign kick_freq = 10'd100;
-	
 	
 	frequency_to_phase F0(freq[0], phase_increment[0]);
 	frequency_to_phase F1(freq[1], phase_increment[1]);
@@ -131,8 +126,6 @@ end
 	frequency_to_phase F9(freq[9], phase_increment[9]);
 	frequency_to_phase F10(freq[10], phase_increment[10]);
 	frequency_to_phase F11(freq[11], phase_increment[11]);
-	frequency_to_phase F_kick (kick_freq,kick_increment);
-	
 
 
 //audio sample timing
@@ -157,7 +150,7 @@ end
 	nco N9 (CLOCK_50, reset, audio_sample_enable, phase_increment[9], phase[9]);
 	nco N10 (CLOCK_50, reset, audio_sample_enable, phase_increment[10], phase[10]);
 	nco N11 (CLOCK_50, reset, audio_sample_enable, phase_increment[11], phase[11]);
-	nco N_kick (CLOCK_50,reset,audio_sample_enable,kick_increment,kick_phase);
+	
 //waveform generator
 wire signed [15:0] raw_wave [0:11];
 wire signed [15:0] wave_out [0:11];
@@ -187,28 +180,70 @@ wire signed [15:0] wave_out [0:11];
 	assign wave_out[10] = (freq[10] == 10'd0) ? 16'sd0 : raw_wave[10];
 	assign wave_out[11] = (freq[11] == 10'd0) ? 16'sd0 : raw_wave[11];
 
+
+wire signed [15:0] kick_wave;
+wire signed [15:0] snare_wave;
+wire signed [15:0] hihat_wave;
+wire kick_active, snare_active, hihat_active;
+
+
+// Kick - WAV sample
 drum D0 (
-    .CLOCK_50(CLOCK_50),
-    .reset(reset),
-    .sample_tick(audio_sample_enable),
-    .kick_trigger(drum_trigger[0]),
-    .phase(kick_phase),
-    .drum_wave(drum_wave)
+    CLOCK_50, reset, audio_sample_enable,
+    drum_trigger[0], 2'd0,
+    kick_wave, kick_active
 );
 
+// Snare - WAV sample
+drum D1 (
+    CLOCK_50, reset, audio_sample_enable,
+    drum_trigger[1], 2'd1,
+    snare_wave, snare_active
+);
+
+drum D2 (
+    CLOCK_50, reset, audio_sample_enable,
+    drum_trigger[2], 2'd2,
+    hihat_wave, hihat_active
+);
+
+
+wire [2:0] drum_count;
+
+assign drum_count =
+    {2'b00, kick_active} +
+    {2'b00, snare_active} +
+    {2'b00, hihat_active};
+	 
+
 wire signed [15:0] piano_wave;
-wire signed [15:0] drum_wave;
+wire signed [15:0] piano_quiet;
 wire signed [15:0] final_wave;
 wave_adder WA0 (wave_out[0], wave_out[1], wave_out[2], wave_out[3],wave_out[4], wave_out[5], wave_out[6], wave_out[7],
 					wave_out[8], wave_out[9], wave_out[10], wave_out[11],active_count,piano_wave);
+
+
+// Reduce piano volume by 75%
+assign piano_quiet = piano_wave >>> 2;
+
+// Count active instruments
+wire [3:0] total_count;
+
+assign total_count =
+    {3'b000, (active_count != 4'd0)} +
+    {3'b000, kick_active} +
+    {3'b000, snare_active} +
+    {3'b000, hihat_active};
+
+// Mix piano and drums
 wave_adder WA1 (
-    piano_wave,
-    drum_wave,
-    16'sd0, 16'sd0, 16'sd0,
-    16'sd0, 16'sd0, 16'sd0,
-    16'sd0, 16'sd0, 16'sd0,
-    16'sd0,
-    4'd2, // (drum + piano)/2 
+    piano_quiet,
+    kick_wave,
+    snare_wave,
+    hihat_wave,
+    16'sd0, 16'sd0, 16'sd0, 16'sd0,
+    16'sd0, 16'sd0, 16'sd0, 16'sd0,
+    total_count,
     final_wave
 );
 					

@@ -155,7 +155,7 @@ module waveform_draw (Clock, Resetn, waveform, VGA_x,VGA_y,VGA_color,scan_active
                     pixel_color = BAR_BACKGROUND;
                 end 
 					 else begin
-						  bar_border = (XC<2)||(XC>28)||(YC<2)||(YC>=8);
+						 bar_border = (XC<2)||(XC>58)||(YC<2)||(YC>=8);
                     pixel_color = bar_border ? 9'h12F : 9'b011_111_011;//green(109, 255, 109)
                 end
             end

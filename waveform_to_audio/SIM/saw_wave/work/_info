@@ -1,0 +1,251 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dW:/ece241/lab5/part1_sim/ModelSim
+vD_FF
+Z0 !s110 1794496202
+!i10b 1
+!s100 1EG_G3ba@IRF[4?I__[Ez0
+IS[4NS8C5iJfH1HO3lncKc0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dW:/ece241/lab5/part1/ModelSim
+Z3 w1794093807
+Z4 8../part1.v
+Z5 F../part1.v
+L0 48
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1794496201.000000
+Z8 !s107 ../part1.v|
+Z9 !s90 -reportprogress|300|../part1.v|
+!i113 1
+Z10 tCvgOpt 0
+n@d_@f@f
+vpart1
+R0
+!i10b 1
+!s100 Z`<mSnLh[OJ<h5zW3zA2k3
+If811h9nTjCNV7zWUbUUlE3
+R1
+R2
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vsawtooth_generator
+Z11 !s110 1795649626
+!i10b 1
+!s100 fXK^PUKAJf]dSJSBNfjXF1
+IX>QWAX:70TflHY__@BE7J2
+R1
+Z12 dD:/ece241/FPGA-music-synthesizer/waveform_to_audio/SIM/saw_wave
+w1795649305
+8sawtooth_generator.v
+Fsawtooth_generator.v
+L0 1
+R6
+r1
+!s85 0
+31
+Z13 !s108 1795649626.000000
+!s107 sawtooth_generator.v|
+!s90 -reportprogress|300|sawtooth_generator.v|
+!i113 1
+R10
+vsine_generator
+!s110 1795647597
+!i10b 1
+!s100 O;_Q7JKMZ<?;__eamiT401
+I>I=ESoG9JHB`gN[:DPZ[A3
+R1
+R12
+w1795044148
+Z14 8wave_generator.v
+Z15 Fwave_generator.v
+L0 2
+R6
+r1
+!s85 0
+31
+!s108 1795647597.000000
+Z16 !s107 wave_generator.v|
+Z17 !s90 -reportprogress|300|wave_generator.v|
+!i113 1
+R10
+vsquare_generator
+Z18 !s110 1795030722
+!i10b 1
+!s100 [34j;=R0n2Y4oDcb8SQbN2
+IeIRP98X_`EVA]:YHjZ1Za1
+R1
+Z19 dW:/ece241/FPGA-music-synthesizer/milestone1/simu/ModelSim
+Z20 w1794695345
+Z21 8../wave_generator.v
+Z22 F../wave_generator.v
+L0 37
+R6
+r1
+!s85 0
+31
+Z23 !s108 1795030721.000000
+Z24 !s107 ../wave_generator.v|
+Z25 !s90 -reportprogress|300|../wave_generator.v|
+!i113 1
+R10
+vtb_sawtooth_generator
+R11
+!i10b 1
+!s100 b<W]GN9BCQBZ4>oCE><f[0
+IE3`>T[VNm`SzNW]@=@zmk0
+R1
+R12
+w1795649476
+8tb_sawtooth_generator.v
+Ftb_sawtooth_generator.v
+L0 4
+R6
+r1
+!s85 0
+31
+R13
+!s107 tb_sawtooth_generator.v|
+!s90 -reportprogress|300|tb_sawtooth_generator.v|
+!i113 1
+R10
+vtb_sine_generator
+!s110 1795647876
+!i10b 1
+!s100 _:Lfc^k>joN07F6YQTIRz2
+ISWF^FX@PPN:hnlQO>Q0>`2
+R1
+R12
+w1795647841
+8tb_sine_generator.v
+Ftb_sine_generator.v
+L0 4
+R6
+r1
+!s85 0
+31
+!s108 1795647876.000000
+!s107 tb_sine_generator.v|
+!s90 -reportprogress|300|tb_sine_generator.v|
+!i113 1
+R10
+vtb_triangle_generator
+Z26 !s110 1795649155
+!i10b 1
+!s100 NQ`DBKSCoJ@S3Mca<3hmO2
+ID=8MVBc?;3NHo:fbI_K7P3
+R1
+R12
+w1795649095
+8tb_triangle_generator.v
+Ftb_triangle_generator.v
+L0 4
+R6
+r1
+!s85 0
+31
+Z27 !s108 1795649155.000000
+!s107 tb_triangle_generator.v|
+!s90 -reportprogress|300|tb_triangle_generator.v|
+!i113 1
+R10
+vtestbench
+R0
+!i10b 1
+!s100 T3=:lK<^d`J1dWIk0JDf<3
+IlEW=aM<JaGU3Gm5Y2NnI;0
+R1
+R2
+w1794093957
+8testbench.v
+Ftestbench.v
+L0 3
+R6
+r1
+!s85 0
+31
+!s108 1794496202.000000
+!s107 testbench.v|
+!s90 -reportprogress|300|testbench.v|
+!i113 1
+R10
+vtriangle_generator
+R26
+!i10b 1
+!s100 FE8D2Y:<Qmc2M8jE599]N1
+INFbII>:jzHA@N;W2Zo1V@2
+R1
+R12
+w1795647814
+R14
+R15
+L0 2
+R6
+r1
+!s85 0
+31
+R27
+R16
+R17
+!i113 1
+R10
+vwave_adder
+R18
+!i10b 1
+!s100 eS7dhOA^nkjSBE15R`ZK@1
+IlD35_4W;jed2SHdajCH1G2
+R1
+R19
+R20
+R21
+R22
+L0 46
+R6
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R10
+vwave_generator
+R18
+!i10b 1
+!s100 ;DAGUOWFkPaR?PQNa=4[Z3
+I=l[GC]1lJFWhVKTea;zSC2
+R1
+R19
+R20
+R21
+R22
+L0 2
+R6
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R10

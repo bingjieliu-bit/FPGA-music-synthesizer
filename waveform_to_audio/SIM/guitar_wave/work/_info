@@ -1,0 +1,291 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dW:/ece241/lab5/part1_sim/ModelSim
+vD_FF
+Z0 !s110 1794496202
+!i10b 1
+!s100 1EG_G3ba@IRF[4?I__[Ez0
+IS[4NS8C5iJfH1HO3lncKc0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dW:/ece241/lab5/part1/ModelSim
+Z3 w1794093807
+Z4 8../part1.v
+Z5 F../part1.v
+L0 48
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1794496201.000000
+Z8 !s107 ../part1.v|
+Z9 !s90 -reportprogress|300|../part1.v|
+!i113 1
+Z10 tCvgOpt 0
+n@d_@f@f
+vguitar_generator
+!s110 1795648994
+!i10b 1
+!s100 8:<fm^1;4g[?nb_PC9NYk1
+I?mce4KHig_I:CTPCJa^ge2
+R1
+Z11 dD:/ece241/FPGA-music-synthesizer/waveform_to_audio/SIM/guitar_wave
+w1795648928
+Z12 8wave_generator.v
+Z13 Fwave_generator.v
+L0 2
+R6
+r1
+!s85 0
+31
+Z14 !s108 1795648994.000000
+Z15 !s107 wave_generator.v|
+Z16 !s90 -reportprogress|300|wave_generator.v|
+!i113 1
+R10
+vpart1
+R0
+!i10b 1
+!s100 Z`<mSnLh[OJ<h5zW3zA2k3
+If811h9nTjCNV7zWUbUUlE3
+R1
+R2
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vpiano_generator
+Z17 !s110 1795648741
+!i10b 1
+!s100 RU1UWiTBaeB=jC9NEYKo;0
+IG5iYF;[VAX@8Z<V2<Lk0^1
+R1
+Z18 dD:/ece241/FPGA-music-synthesizer/waveform_to_audio/SIM/piano_wave
+w1795648572
+R12
+R13
+L0 2
+R6
+r1
+!s85 0
+31
+Z19 !s108 1795648741.000000
+R15
+R16
+!i113 1
+R10
+vsawtooth_generator
+Z20 !s110 1795646693
+!i10b 1
+!s100 IZz0;:G^XIVaZOCkdSERH2
+I?1N2A]>lQ^oob:B_jzM<?0
+R1
+R18
+Z21 w1795646311
+R12
+R13
+L0 81
+R6
+r1
+!s85 0
+31
+Z22 !s108 1795646693.000000
+R15
+R16
+!i113 1
+R10
+vsine_generator
+R20
+!i10b 1
+!s100 jW01CE_TgdI>To_^n8`kk0
+IOJ^BV>Z5G:d_64M<@9fQl0
+R1
+R18
+R21
+R12
+R13
+L0 41
+R6
+r1
+!s85 0
+31
+R22
+R15
+R16
+!i113 1
+R10
+vsquare_generator
+R20
+!i10b 1
+!s100 0ZJ3h`E0I90GM]nU?Smnc1
+IJ7g59YHGTz<FWHAzTdE;;1
+R1
+R18
+R21
+R12
+R13
+L0 55
+R6
+r1
+!s85 0
+31
+R22
+R15
+R16
+!i113 1
+R10
+vtb_guitar_generator
+!s110 1795648995
+!i10b 1
+!s100 h2cz;GU^K`cX973I61eRI0
+IbWf;cjZFMUZCXk6>E9=Ji2
+R1
+R11
+w1795648904
+8tb_guitar_generator.v
+Ftb_guitar_generator.v
+L0 4
+R6
+r1
+!s85 0
+31
+R14
+!s107 tb_guitar_generator.v|
+!s90 -reportprogress|300|tb_guitar_generator.v|
+!i113 1
+R10
+vtb_piano_generator
+R17
+!i10b 1
+!s100 LFh4F=WR07dI>WbIRJWl?0
+IMA]05j3PI[;=U0j:_jPCb3
+R1
+R18
+w1795648602
+8tb_piano_generator.v
+Ftb_piano_generator.v
+L0 4
+R6
+r1
+!s85 0
+31
+R19
+!s107 tb_piano_generator.v|
+!s90 -reportprogress|300|tb_piano_generator.v|
+!i113 1
+R10
+vtb_sine_generator
+!s110 1795648278
+!i10b 1
+!s100 Ib`DfXgY8]ClKWNzGhQB11
+I<8B7BQ=L>dn7G@`i6b3gO3
+R1
+R18
+w1795647231
+8tb_sine_generator.v
+Ftb_sine_generator.v
+L0 4
+R6
+r1
+!s85 0
+31
+!s108 1795648278.000000
+!s107 tb_sine_generator.v|
+!s90 -reportprogress|300|tb_sine_generator.v|
+!i113 1
+R10
+vtestbench
+R0
+!i10b 1
+!s100 T3=:lK<^d`J1dWIk0JDf<3
+IlEW=aM<JaGU3Gm5Y2NnI;0
+R1
+R2
+w1794093957
+8testbench.v
+Ftestbench.v
+L0 3
+R6
+r1
+!s85 0
+31
+!s108 1794496202.000000
+!s107 testbench.v|
+!s90 -reportprogress|300|testbench.v|
+!i113 1
+R10
+vtriangle_generator
+R20
+!i10b 1
+!s100 CV26;WUUl`gAWWEDoJV5C0
+In[W;l`?]=A@1Y?z^MH:F60
+R1
+R18
+R21
+R12
+R13
+L0 64
+R6
+r1
+!s85 0
+31
+R22
+R15
+R16
+!i113 1
+R10
+vwave_adder
+R20
+!i10b 1
+!s100 mkTZ@P@iFHQB]42nfV3e?3
+I2n5g?YH<P^nGjl5QAJ@m22
+R1
+R18
+R21
+R12
+R13
+L0 121
+R6
+r1
+!s85 0
+31
+R22
+R15
+R16
+!i113 1
+R10
+vwave_generator
+R20
+!i10b 1
+!s100 2HVkNPRPTE0l9X65RFa<E3
+IKDzW:@HHY_87ddO@d3aFB0
+R1
+R18
+R21
+R12
+R13
+L0 2
+R6
+r1
+!s85 0
+31
+R22
+R15
+R16
+!i113 1
+R10

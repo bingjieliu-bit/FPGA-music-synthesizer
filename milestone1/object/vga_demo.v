@@ -136,6 +136,7 @@ module waveform_draw (Clock, Resetn, waveform, VGA_x,VGA_y,VGA_color,scan_active
         VGA_y = 9'd0;
         VGA_color = 9'd0;
         pixel_color = 9'd0;
+		  bar_border = 1'b0;
 
         if (scan_active) begin
             VGA_x = selection_x + XC;
@@ -154,7 +155,8 @@ module waveform_draw (Clock, Resetn, waveform, VGA_x,VGA_y,VGA_color,scan_active
                     pixel_color = BAR_BACKGROUND;
                 end 
 					 else begin
-                    pixel_color = 9'b011_111_011;//green(109, 255, 109)
+						  bar_border = (XC<2)||(XC>28)||(YC<2)||(YC>=8);
+                    pixel_color = bar_border ? 9'h12F : 9'b011_111_011;//green(109, 255, 109)
                 end
             end
 
